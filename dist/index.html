@@ -1,0 +1,3863 @@
+<style scoped>
+/*!
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */.outer-wrapper{width:630px;height:615px;position:relative;overflow:auto;border:1px solid #ddd}.outer-wrapper .status-message{margin:10px}.outer-wrapper h2.widget-head,.outer-wrapper p.widget-stand{margin:10px 10px 0}.outer-wrapper table.info-table,.outer-wrapper table.salary-table{font-family:verdana,arial,sans-serif;font-size:11px;text-align:left;color:#333;border-width:1px;border-color:#c8c7cf;border-collapse:collapse;margin:20px 10px}.outer-wrapper table.info-table caption,.outer-wrapper table.salary-table caption{font-family:verdana,arial,sans-serif;font-size:11px;text-align:left;color:#333;line-height:normal}.outer-wrapper table.info-table th,.outer-wrapper table.salary-table th{border-width:1px;padding:2px;border-style:solid;border-color:#c8c7cf;background-color:#eee;line-height:normal}.outer-wrapper table.info-table td,.outer-wrapper table.salary-table td{border-width:1px;padding:2px;border-style:solid;border-color:#c8c7cf;background-color:#fff;line-height:normal}.outer-wrapper .info-table-wrapper p,.outer-wrapper .salary-table-wrapper p{margin:0 10px}.outer-wrapper table.info-table .key-row{background-color:#ccc}.outer-wrapper .info-chart,.outer-wrapper .salary-chart{display:none;position:relative;width:625px;overflow:hidden}.outer-wrapper .info-menu,.outer-wrapper .salary-menu{display:none;margin:10px 10px 0}.outer-wrapper h3.info-menu,.outer-wrapper h3.salary-menu{margin:5px 0 -25px 10px;text-transform:uppercase}.outer-wrapper .key{position:absolute;margin:50px 0 0 70px;width:100px}.outer-wrapper .key span{width:18px;height:18px;border:0;float:left;margin:0 10px 0 0}.outer-wrapper .key ul li p{margin:0 0 7px}.outer-wrapper .key ul li{list-style-type:none;margin:0 0 0 -30px;overflow:auto}.outer-wrapper .axis line,.outer-wrapper .axis path{fill:none;stroke:#000;shape-rendering:crispEdges}.outer-wrapper .axis text{font-family:sans-serif}.outer-wrapper .info-chart rect:hover{fill:#33adbc}.outer-wrapper rect{shape-rendering:crispEdges;-webkit-transition:all .1s;-moz-transition:all .1s;-ms-transition:all .1s;-o-transition:all .1s;transition:all .1s}.outer-wrapper .infobox{position:absolute;width:120px;height:auto;padding:10px;background-color:#000;pointer-events:none}.outer-wrapper .infobox-left:before{content:"";position:absolute;bottom:11px;right:-7px;border-left:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:0}.outer-wrapper .infobox-right:before{content:"";position:absolute;bottom:11px;left:-7px;border-right:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:0}.outer-wrapper .infobox.hidden{display:none}.outer-wrapper .infobox p{margin:0;color:#fff;font-family:sans-serif;font-size:16px;line-height:20px}.outer-wrapper .nav-tabs{border-bottom:1px solid #ddd;margin:10px 0 10px -22px;list-style:none;display:none}.outer-wrapper .nav-tabs ul{padding:0;margin:0 0 10px 25px}.outer-wrapper .nav-tab li{line-height:20px}.outer-wrapper .nav-tabs:after,.outer-wrapper .nav-tabs:before{display:table;line-height:0;content:""}.outer-wrapper .nav-tabs:after{clear:both}.outer-wrapper .nav-tabs>li{margin-bottom:-1px;float:left;list-style:none}.outer-wrapper .nav-tabs>li>a{padding:8px 12px;margin-right:2px;display:block;color:#555;background-color:#eee;text-decoration:none;line-height:20px;border:1px solid #fff;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0}.outer-wrapper .nav-tabs>li>a:hover{border-color:#eee #eee #ddd;text-decoration:none;background-color:#ddd}.outer-wrapper .nav-tabs>.active>a,.outer-wrapper .nav-tabs>.active>a:hover{color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:#fff}
+</style>
+<div class="outer-wrapper">
+
+<h2 class="widget-head">INTERACTIVE: Science's gender gap</h2>
+<p class="widget-stand">Female scientists have made steady gains in recent decades but they face persistent career challenges. US universities and colleges employ far more male scientists than female ones and men earn significantly more in science occupations.</p>
+
+<ul class="nav-tabs">
+    <li class="active">
+	    <a href="#">Gender breakdown: 1973-2008</a>
+    </li>
+    <li>
+    	<a href="#">Median annual salary: 2008</a>
+    </li>
+</ul>
+
+<h3 class="info-menu">Gender breakdown by field of study for US scientists and engineers with PhDs employed in academia</h3>
+
+<div class="info-chart">
+	<div class="infobox hidden">
+		<p><span class="value">100</span> thousand</p>
+	</div>
+	<div class="key">
+	<ul>
+		<li>
+			<span style="background: #F8B436; border-color: #FF4321;"></span>
+			<p> Male</p>
+		</li>
+		<li>
+			<span style="background: #E53524; border-color: #FF4321;"></span>
+			<p> Female</p>
+		</li>
+	</ul>
+	</div>
+
+</div>
+
+
+<p class="info-menu">
+<select class="position-dropdown">
+<option value="all-positions">All positions</option>
+<option value="full-time-senior">Full-time senior faculty</option>
+<option value="full-time-junior">Full-time junior faculty</option>
+<option value="other-full-time">Other full-time positions</option>
+<option value="postdoc">Postdocs</option>
+<option value="part-time">Part-time positions</option>
+</select>
+<select class="field-dropdown">
+<option value="all-fields">All fields</option>
+<option value="physical-sciences">Physical sciences</option>
+<option value="mathematics">Mathematics</option>
+<option value="computer-sciences">Computer sciences</option>
+<option value="life-sciences">Life sciences</option>
+<option value="psychology">Psychology</option>
+<option value="social-sciences">Social sciences</option>
+<option value="engineering">Engineering</option>
+</select>
+Adjust scale: <input type="checkbox"/>
+<!-- <button type="button" class="btn" data-toggle="buttons-checkbox">Zoom scale</button> -->
+</p>
+<p class="info-menu credit">Data source: National Science Foundation <a href="http://www.nsf.gov/statistics/seind12/append/c5/at05-17.pdf">http://www.nsf.gov/statistics/seind12/append/c5/at05-17.pdf</a></p>
+
+<h3 class="salary-menu">Median annual salary of US scientists and engineers employed full time in 2008</h3>
+
+<div class="salary-chart"></div>
+
+<p class="salary-menu"> 
+<select class="occupation-dropdown">
+<option value="all-occupations">All occupations</option>
+<option value="s-and-e-occupations">S&#38;E occupations</option>
+<option value="scientist">Scientist</option>
+<option value="biological-life-scientist">Biological life scientist</option>
+<option value="computer-and-information-scientist">Computer and information scientist</option>
+<option value="mathematical-scientist">Mathematical scientist</option>
+<option value="physical-scientist">Physical scientist</option>
+<option value="psychologist">Psychologist</option>
+<option value="social-scientist">Social scientist</option>
+<option value="engineer">Engineer</option>
+<option value="s-and-e-related">S&#38;E related occupations</option>
+<option value="non-s-and-e-occupations">Non-S&#38;E occupations</option>
+
+
+</select>
+<select class="age-dropdown">
+<option value="all-ages">All ages</option>
+<option value="twenty-nine-and-younger">29 and younger</option>
+<option value="thirty-to-thirty-nine">30 to 39</option>
+<option value="forty-to-forty-nine">40 to 49</option>
+<option value="fifty-to-seventy-five">50 to 75</option>
+</select>
+<select class="degree-dropdown">
+<option value="all-degrees">All degrees</option>
+<option value="bachelors">Bachelor&#8217;s</option>
+<option value="masters">Master&#8217;s</option>
+<option value="doctorate">Doctorate</option>
+</select>	
+</p>
+<p class="salary-menu credit">Data source: National Science Foundation Table 9-16 <a href="http://www.nsf.gov/statistics/wmpd/2013/tables.cfm">http://www.nsf.gov/statistics/wmpd/2013/tables.cfm</a></p>
+
+<div class="info-table-wrapper">
+
+<p class="status-message comment-error"><em>The interactive companion to this table requires a modern browser (e.g. Chrome, Safari, Firefox or Internet Explorer 9+) with javascript enabled.</em></p>
+
+<table class="info-table all-positions data">
+
+<caption>
+        US science, engineering and health doctorate holders employed in all positions in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+		<th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">118.0</td>
+		<td class="all-fields">134.1</td>
+		<td class="all-fields">145.5</td>
+		<td class="all-fields">155.3</td>
+		<td class="all-fields">167.1</td>
+		<td class="all-fields">176.1</td>
+		<td class="all-fields">190.2</td>
+		<td class="all-fields">195.9</td>
+		<td class="all-fields">206.6</td>
+		<td class="all-fields">210.6</td>
+		<td class="all-fields">213.8</td>
+		<td class="all-fields">217.5</td>
+		<td class="all-fields">232.5</td>
+		<td class="all-fields">240.2</td>
+		<td class="all-fields">245.5</td>
+		<td class="all-fields">259.5</td>
+		<td class="all-fields">272.8</td>
+		<td class="all-fields">272.8</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">25.5</td>
+		<td class="physical-sciences">27.5</td>
+		<td class="physical-sciences">29.2</td>
+		<td class="physical-sciences">28.8</td>
+		<td class="physical-sciences">30.0</td>
+		<td class="physical-sciences">29.9</td>
+		<td class="physical-sciences">32.2</td>
+		<td class="physical-sciences">32.8</td>
+		<td class="physical-sciences">33.6</td>
+		<td class="physical-sciences">33.7</td>
+		<td class="physical-sciences">35.0</td>
+		<td class="physical-sciences">35.7</td>
+		<td class="physical-sciences">37.5</td>
+		<td class="physical-sciences">38.7</td>
+		<td class="physical-sciences">38.6</td>
+		<td class="physical-sciences">39.9</td>
+		<td class="physical-sciences">39.6</td>
+		<td class="physical-sciences">39.3</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">9.7</td>
+		<td class="mathematics">11.0</td>
+		<td class="mathematics">11.7</td>
+		<td class="mathematics">12.2</td>
+		<td class="mathematics">12.4</td>
+		<td class="mathematics">12.9</td>
+		<td class="mathematics">13.6</td>
+		<td class="mathematics">13.8</td>
+		<td class="mathematics">14.5</td>
+		<td class="mathematics">15.2</td>
+		<td class="mathematics">15.5</td>
+		<td class="mathematics">14.6</td>
+		<td class="mathematics">15.6</td>
+		<td class="mathematics">15.2</td>
+		<td class="mathematics">14.9</td>
+		<td class="mathematics">16.7</td>
+		<td class="mathematics">17.4</td>
+		<td class="mathematics">17.4</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">1.1</td>
+		<td class="computer-sciences">1.5</td>
+		<td class="computer-sciences">2.0</td>
+		<td class="computer-sciences">2.5</td>
+		<td class="computer-sciences">3.1</td>
+		<td class="computer-sciences">3.3</td>
+		<td class="computer-sciences">3.7</td>
+		<td class="computer-sciences">3.8</td>
+		<td class="computer-sciences">5.2</td>
+		<td class="computer-sciences">5.8</td>
+		<td class="computer-sciences">6.9</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">34.9</td>
+		<td class="life-sciences">39.4</td>
+		<td class="life-sciences">42.6</td>
+		<td class="life-sciences">47.0</td>
+		<td class="life-sciences">51.3</td>
+		<td class="life-sciences">54.9</td>
+		<td class="life-sciences">58.7</td>
+		<td class="life-sciences">61.3</td>
+		<td class="life-sciences">64.8</td>
+		<td class="life-sciences">66.9</td>
+		<td class="life-sciences">68.2</td>
+		<td class="life-sciences">71.6</td>
+		<td class="life-sciences">77.3</td>
+		<td class="life-sciences">81.9</td>
+		<td class="life-sciences">84.3</td>
+		<td class="life-sciences">90.0</td>
+		<td class="life-sciences">95.5</td>
+		<td class="life-sciences">94.0</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">12.2</td>
+		<td class="psychology">14.8</td>
+		<td class="psychology">16.2</td>
+		<td class="psychology">17.7</td>
+		<td class="psychology">20.1</td>
+		<td class="psychology">21.0</td>
+		<td class="psychology">23.1</td>
+		<td class="psychology">23.7</td>
+		<td class="psychology">25.0</td>
+		<td class="psychology">25.2</td>
+		<td class="psychology">25.0</td>
+		<td class="psychology">26.1</td>
+		<td class="psychology">27.3</td>
+		<td class="psychology">29.0</td>
+		<td class="psychology">30.4</td>
+		<td class="psychology">31.8</td>
+		<td class="psychology">35.0</td>
+		<td class="psychology">34.3</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">23.4</td>
+		<td class="social-sciences">28.0</td>
+		<td class="social-sciences">31.1</td>
+		<td class="social-sciences">33.6</td>
+		<td class="social-sciences">36.9</td>
+		<td class="social-sciences">38.9</td>
+		<td class="social-sciences">42.0</td>
+		<td class="social-sciences">42.2</td>
+		<td class="social-sciences">44.5</td>
+		<td class="social-sciences">44.8</td>
+		<td class="social-sciences">44.4</td>
+		<td class="social-sciences">42.5</td>
+		<td class="social-sciences">44.9</td>
+		<td class="social-sciences">46.2</td>
+		<td class="social-sciences">46.9</td>
+		<td class="social-sciences">48.1</td>
+		<td class="social-sciences">50.0</td>
+		<td class="social-sciences">50.9</td>
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">12.4</td>
+		<td class="engineering">13.4</td>
+		<td class="engineering">14.8</td>
+		<td class="engineering">15.8</td>
+		<td class="engineering">16.1</td>
+		<td class="engineering">18.1</td>
+		<td class="engineering">19.9</td>
+		<td class="engineering">21.2</td>
+		<td class="engineering">22.9</td>
+		<td class="engineering">22.8</td>
+		<td class="engineering">23.1</td>
+		<td class="engineering">23.8</td>
+		<td class="engineering">26.6</td>
+		<td class="engineering">25.5</td>
+		<td class="engineering">26.6</td>
+		<td class="engineering">27.8</td>
+		<td class="engineering">29.6</td>
+		<td class="engineering">29.8</td>
+	</tr>
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">107.2</td>
+		<td class="all-fields">120.3</td>
+		<td class="all-fields">129.0</td>
+		<td class="all-fields">136.0</td>
+		<td class="all-fields">144.0</td>
+		<td class="all-fields">149.8</td>
+		<td class="all-fields">159.2</td>
+		<td class="all-fields">162.0</td>
+		<td class="all-fields">168.0</td>
+		<td class="all-fields">168.7</td>
+		<td class="all-fields">166.9</td>
+		<td class="all-fields">165.1</td>
+		<td class="all-fields">173.3</td>
+		<td class="all-fields">175.8</td>
+		<td class="all-fields">175.0</td>
+		<td class="all-fields">180.7</td>
+		<td class="all-fields">182.7</td>
+		<td class="all-fields">179.4</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">24.0</td>
+		<td class="physical-sciences">25.9</td>
+		<td class="physical-sciences">27.4</td>
+		<td class="physical-sciences">26.9</td>
+		<td class="physical-sciences">27.8</td>
+		<td class="physical-sciences">27.7</td>
+		<td class="physical-sciences">29.8</td>
+		<td class="physical-sciences">30.0</td>
+		<td class="physical-sciences">30.5</td>
+		<td class="physical-sciences">30.8</td>
+		<td class="physical-sciences">31.4</td>
+		<td class="physical-sciences">31.4</td>
+		<td class="physical-sciences">32.4</td>
+		<td class="physical-sciences">33.4</td>
+		<td class="physical-sciences">32.8</td>
+		<td class="physical-sciences">33.7</td>
+		<td class="physical-sciences">32.3</td>
+		<td class="physical-sciences">31.7</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">9.0</td>
+		<td class="mathematics">10.3</td>
+		<td class="mathematics">10.8</td>
+		<td class="mathematics">11.3</td>
+		<td class="mathematics">11.3</td>
+		<td class="mathematics">11.8</td>
+		<td class="mathematics">12.3</td>
+		<td class="mathematics">12.5</td>
+		<td class="mathematics">13.0</td>
+		<td class="mathematics">13.9</td>
+		<td class="mathematics">13.7</td>
+		<td class="mathematics">12.8</td>
+		<td class="mathematics">13.5</td>
+		<td class="mathematics">12.9</td>
+		<td class="mathematics">12.6</td>
+		<td class="mathematics">13.8</td>
+		<td class="mathematics">14.1</td>
+		<td class="mathematics">13.7</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.7</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">1.3</td>
+		<td class="computer-sciences">1.6</td>
+		<td class="computer-sciences">2.1</td>
+		<td class="computer-sciences">2.5</td>
+		<td class="computer-sciences">2.6</td>
+		<td class="computer-sciences">2.9</td>
+		<td class="computer-sciences">2.9</td>
+		<td class="computer-sciences">4.3</td>
+		<td class="computer-sciences">4.5</td>
+		<td class="computer-sciences">5.5</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">30.8</td>
+		<td class="life-sciences">34.3</td>
+		<td class="life-sciences">36.6</td>
+		<td class="life-sciences">40.1</td>
+		<td class="life-sciences">42.9</td>
+		<td class="life-sciences">44.5</td>
+		<td class="life-sciences">46.7</td>
+		<td class="life-sciences">47.9</td>
+		<td class="life-sciences">49.5</td>
+		<td class="life-sciences">50.1</td>
+		<td class="life-sciences">49.4</td>
+		<td class="life-sciences">50.1</td>
+		<td class="life-sciences">52.6</td>
+		<td class="life-sciences">55.1</td>
+		<td class="life-sciences">54.9</td>
+		<td class="life-sciences">56.6</td>
+		<td class="life-sciences">57.9</td>
+		<td class="life-sciences">55.3</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">10.0</td>
+		<td class="psychology">11.8</td>
+		<td class="psychology">12.6</td>
+		<td class="psychology">13.5</td>
+		<td class="psychology">14.9</td>
+		<td class="psychology">15.1</td>
+		<td class="psychology">16.0</td>
+		<td class="psychology">16.2</td>
+		<td class="psychology">16.5</td>
+		<td class="psychology">16.0</td>
+		<td class="psychology">14.7</td>
+		<td class="psychology">14.7</td>
+		<td class="psychology">15.4</td>
+		<td class="psychology">15.6</td>
+		<td class="psychology">15.7</td>
+		<td class="psychology">15.6</td>
+		<td class="psychology">16.0</td>
+		<td class="psychology">15.5</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">21.0</td>
+		<td class="social-sciences">24.7</td>
+		<td class="social-sciences">26.9</td>
+		<td class="social-sciences">28.5</td>
+		<td class="social-sciences">30.9</td>
+		<td class="social-sciences">32.3</td>
+		<td class="social-sciences">34.3</td>
+		<td class="social-sciences">33.9</td>
+		<td class="social-sciences">35.1</td>
+		<td class="social-sciences">34.6</td>
+		<td class="social-sciences">33.4</td>
+		<td class="social-sciences">31.3</td>
+		<td class="social-sciences">31.9</td>
+		<td class="social-sciences">32.4</td>
+		<td class="social-sciences">31.7</td>
+		<td class="social-sciences">32.0</td>
+		<td class="social-sciences">31.9</td>
+		<td class="social-sciences">32.0</td>
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">12.3</td>
+		<td class="engineering">13.3</td>
+		<td class="engineering">14.7</td>
+		<td class="engineering">15.7</td>
+		<td class="engineering">15.9</td>
+		<td class="engineering">17.8</td>
+		<td class="engineering">19.5</td>
+		<td class="engineering">20.6</td>
+		<td class="engineering">22.2</td>
+		<td class="engineering">21.8</td>
+		<td class="engineering">22.1</td>
+		<td class="engineering">22.3</td>
+		<td class="engineering">24.8</td>
+		<td class="engineering">23.4</td>
+		<td class="engineering">24.3</td>
+		<td class="engineering">24.8</td>
+		<td class="engineering">26.0</td>
+		<td class="engineering">25.8</td>
+	</tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">10.7</td>
+		<td class="all-fields">13.8</td>
+		<td class="all-fields">16.5</td>
+		<td class="all-fields">19.4</td>
+		<td class="all-fields">23.1</td>
+		<td class="all-fields">26.5</td>
+		<td class="all-fields">31.1</td>
+		<td class="all-fields">34.0</td>
+		<td class="all-fields">38.7</td>
+		<td class="all-fields">41.9</td>
+		<td class="all-fields">46.9</td>
+		<td class="all-fields">52.4</td>
+		<td class="all-fields">59.2</td>
+		<td class="all-fields">64.4</td>
+		<td class="all-fields">70.5</td>
+		<td class="all-fields">78.7</td>
+		<td class="all-fields">90.1</td>
+		<td class="all-fields">93.4</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">1.4</td>
+		<td class="physical-sciences">1.6</td>
+		<td class="physical-sciences">1.7</td>
+		<td class="physical-sciences">1.9</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">2.5</td>
+		<td class="physical-sciences">2.8</td>
+		<td class="physical-sciences">3.1</td>
+		<td class="physical-sciences">3.0</td>
+		<td class="physical-sciences">3.6</td>
+		<td class="physical-sciences">4.4</td>
+		<td class="physical-sciences">5.1</td>
+		<td class="physical-sciences">5.3</td>
+		<td class="physical-sciences">5.8</td>
+		<td class="physical-sciences">6.1</td>
+		<td class="physical-sciences">7.3</td>
+		<td class="physical-sciences">7.7</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.3</td>
+		<td class="mathematics">1.4</td>
+		<td class="mathematics">1.5</td>
+		<td class="mathematics">1.4</td>
+		<td class="mathematics">1.7</td>
+		<td class="mathematics">1.8</td>
+		<td class="mathematics">2.1</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">2.3</td>
+		<td class="mathematics">2.9</td>
+		<td class="mathematics">3.3</td>
+		<td class="mathematics">3.8</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.7</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">1.0</td>
+		<td class="computer-sciences">1.2</td>
+		<td class="computer-sciences">1.4</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">4.0</td>
+		<td class="life-sciences">5.1</td>
+		<td class="life-sciences">6.0</td>
+		<td class="life-sciences">6.9</td>
+		<td class="life-sciences">8.4</td>
+		<td class="life-sciences">10.3</td>
+		<td class="life-sciences">12.1</td>
+		<td class="life-sciences">13.3</td>
+		<td class="life-sciences">15.3</td>
+		<td class="life-sciences">16.8</td>
+		<td class="life-sciences">18.8</td>
+		<td class="life-sciences">21.5</td>
+		<td class="life-sciences">24.7</td>
+		<td class="life-sciences">26.7</td>
+		<td class="life-sciences">29.4</td>
+		<td class="life-sciences">33.4</td>
+		<td class="life-sciences">37.6</td>
+		<td class="life-sciences">38.8</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">2.2</td>
+		<td class="psychology">3.0</td>
+		<td class="psychology">3.6</td>
+		<td class="psychology">4.3</td>
+		<td class="psychology">5.2</td>
+		<td class="psychology">5.9</td>
+		<td class="psychology">7.1</td>
+		<td class="psychology">7.6</td>
+		<td class="psychology">8.5</td>
+		<td class="psychology">9.2</td>
+		<td class="psychology">10.3</td>
+		<td class="psychology">11.5</td>
+		<td class="psychology">11.9</td>
+		<td class="psychology">13.4</td>
+		<td class="psychology">14.7</td>
+		<td class="psychology">16.2</td>
+		<td class="psychology">19.0</td>
+		<td class="psychology">18.8</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">2.4</td>
+		<td class="social-sciences">3.3</td>
+		<td class="social-sciences">4.2</td>
+		<td class="social-sciences">5.2</td>
+		<td class="social-sciences">6.0</td>
+		<td class="social-sciences">6.5</td>
+		<td class="social-sciences">7.7</td>
+		<td class="social-sciences">8.3</td>
+		<td class="social-sciences">9.4</td>
+		<td class="social-sciences">10.2</td>
+		<td class="social-sciences">10.9</td>
+		<td class="social-sciences">11.2</td>
+		<td class="social-sciences">13.0</td>
+		<td class="social-sciences">13.8</td>
+		<td class="social-sciences">15.2</td>
+		<td class="social-sciences">16.2</td>
+		<td class="social-sciences">18.2</td>
+		<td class="social-sciences">19.0</td>
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.6</td>
+		<td class="engineering">0.7</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">1.7</td>
+		<td class="engineering">2.1</td>
+		<td class="engineering">2.3</td>
+		<td class="engineering">3.0</td>
+		<td class="engineering">3.6</td>
+		<td class="engineering">4.0</td>
+	</tr>
+
+
+</tbody> 
+</table> 
+
+<table class="info-table full-time-senior">
+
+<caption>
+		US science, engineering and health doctorate holders employed as full-time senior faculty members in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+        <th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">74.0</td>
+		<td class="all-fields">84.3</td>
+		<td class="all-fields">90.7</td>
+		<td class="all-fields">97.2</td>
+		<td class="all-fields">107.3</td>
+		<td class="all-fields">115.6</td>
+		<td class="all-fields">119.7</td>
+		<td class="all-fields">127.3</td>
+		<td class="all-fields">131.0</td>
+		<td class="all-fields">133.0</td>
+		<td class="all-fields">128.6</td>
+		<td class="all-fields">127.3</td>
+		<td class="all-fields">131.9</td>
+		<td class="all-fields">136.7</td>
+		<td class="all-fields">136.9</td>
+		<td class="all-fields">142.0</td>
+		<td class="all-fields">139.4</td>
+		<td class="all-fields">144.9</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">15.2</td>
+		<td class="physical-sciences">17.1</td>
+		<td class="physical-sciences">18.0</td>
+		<td class="physical-sciences">18.8</td>
+		<td class="physical-sciences">19.7</td>
+		<td class="physical-sciences">20.2</td>
+		<td class="physical-sciences">20.8</td>
+		<td class="physical-sciences">21.5</td>
+		<td class="physical-sciences">21.4</td>
+		<td class="physical-sciences">21.2</td>
+		<td class="physical-sciences">20.6</td>
+		<td class="physical-sciences">20.0</td>
+		<td class="physical-sciences">20.5</td>
+		<td class="physical-sciences">20.7</td>
+		<td class="physical-sciences">20.7</td>
+		<td class="physical-sciences">21.3</td>
+		<td class="physical-sciences">20.2</td>
+		<td class="physical-sciences">20.7</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">5.9</td>
+		<td class="mathematics">6.9</td>
+		<td class="mathematics">7.6</td>
+		<td class="mathematics">8.3</td>
+		<td class="mathematics">9.1</td>
+		<td class="mathematics">9.7</td>
+		<td class="mathematics">10.0</td>
+		<td class="mathematics">10.5</td>
+		<td class="mathematics">10.9</td>
+		<td class="mathematics">11.8</td>
+		<td class="mathematics">11.5</td>
+		<td class="mathematics">10.6</td>
+		<td class="mathematics">10.8</td>
+		<td class="mathematics">10.8</td>
+		<td class="mathematics">10.2</td>
+		<td class="mathematics">11.2</td>
+		<td class="mathematics">10.7</td>
+		<td class="mathematics">11.1</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">1.7</td>
+		<td class="computer-sciences">1.7</td>
+		<td class="computer-sciences">2.1</td>
+		<td class="computer-sciences">2.4</td>
+		<td class="computer-sciences">2.9</td>
+		<td class="computer-sciences">3.2</td>
+		<td class="computer-sciences">3.8</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">21.0</td>
+		<td class="life-sciences">23.4</td>
+		<td class="life-sciences">24.6</td>
+		<td class="life-sciences">27.0</td>
+		<td class="life-sciences">29.6</td>
+		<td class="life-sciences">32.6</td>
+		<td class="life-sciences">33.7</td>
+		<td class="life-sciences">35.8</td>
+		<td class="life-sciences">36.4</td>
+		<td class="life-sciences">37.4</td>
+		<td class="life-sciences">35.8</td>
+		<td class="life-sciences">37.2</td>
+		<td class="life-sciences">38.3</td>
+		<td class="life-sciences">40.6</td>
+		<td class="life-sciences">41.2</td>
+		<td class="life-sciences">43.4</td>
+		<td class="life-sciences">43.7</td>
+		<td class="life-sciences">44.4</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">7.3</td>
+		<td class="psychology">8.7</td>
+		<td class="psychology">9.1</td>
+		<td class="psychology">9.9</td>
+		<td class="psychology">11.7</td>
+		<td class="psychology">12.8</td>
+		<td class="psychology">13.5</td>
+		<td class="psychology">14.3</td>
+		<td class="psychology">15.0</td>
+		<td class="psychology">15.3</td>
+		<td class="psychology">14.3</td>
+		<td class="psychology">14.5</td>
+		<td class="psychology">15.3</td>
+		<td class="psychology">15.6</td>
+		<td class="psychology">15.9</td>
+		<td class="psychology">15.8</td>
+		<td class="psychology">16.1</td>
+		<td class="psychology">16.9</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">15.9</td>
+		<td class="social-sciences">18.5</td>
+		<td class="social-sciences">20.7</td>
+		<td class="social-sciences">21.7</td>
+		<td class="social-sciences">24.9</td>
+		<td class="social-sciences">26.3</td>
+		<td class="social-sciences">27.7</td>
+		<td class="social-sciences">29.5</td>
+		<td class="social-sciences">31.1</td>
+		<td class="social-sciences">30.6</td>
+		<td class="social-sciences">29.9</td>
+		<td class="social-sciences">28.1</td>
+		<td class="social-sciences">28.8</td>
+		<td class="social-sciences">30.1</td>
+		<td class="social-sciences">29.6</td>
+		<td class="social-sciences">30.7</td>
+		<td class="social-sciences">29.3</td>
+		<td class="social-sciences">30.7</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">8.7</td>
+		<td class="engineering">9.7</td>
+		<td class="engineering">10.7</td>
+		<td class="engineering">11.6</td>
+		<td class="engineering">12.4</td>
+		<td class="engineering">13.7</td>
+		<td class="engineering">13.9</td>
+		<td class="engineering">15.3</td>
+		<td class="engineering">15.9</td>
+		<td class="engineering">15.8</td>
+		<td class="engineering">15.7</td>
+		<td class="engineering">15.3</td>
+		<td class="engineering">16.6</td>
+		<td class="engineering">16.6</td>
+		<td class="engineering">16.8</td>
+		<td class="engineering">16.8</td>
+		<td class="engineering">16.2</td>
+		<td class="engineering">17.3</td>
+    </tr>
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">69.7</td>
+		<td class="all-fields">78.9</td>
+		<td class="all-fields">84.7</td>
+		<td class="all-fields">90.2</td>
+		<td class="all-fields">98.7</td>
+		<td class="all-fields">104.9</td>
+		<td class="all-fields">107.4</td>
+		<td class="all-fields">113.2</td>
+		<td class="all-fields">115.2</td>
+		<td class="all-fields">115.5</td>
+		<td class="all-fields">110.3</td>
+		<td class="all-fields">107.0</td>
+		<td class="all-fields">109.4</td>
+		<td class="all-fields">110.6</td>
+		<td class="all-fields">108.3</td>
+		<td class="all-fields">109.7</td>
+		<td class="all-fields">104.6</td>
+		<td class="all-fields">106.1</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">14.7</td>
+		<td class="physical-sciences">16.6</td>
+		<td class="physical-sciences">17.4</td>
+		<td class="physical-sciences">18.1</td>
+		<td class="physical-sciences">19.0</td>
+		<td class="physical-sciences">19.4</td>
+		<td class="physical-sciences">20.0</td>
+		<td class="physical-sciences">20.6</td>
+		<td class="physical-sciences">20.3</td>
+		<td class="physical-sciences">20.3</td>
+		<td class="physical-sciences">19.5</td>
+		<td class="physical-sciences">18.8</td>
+		<td class="physical-sciences">18.9</td>
+		<td class="physical-sciences">19.0</td>
+		<td class="physical-sciences">18.6</td>
+		<td class="physical-sciences">18.9</td>
+		<td class="physical-sciences">17.6</td>
+		<td class="physical-sciences">17.6</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">5.6</td>
+		<td class="mathematics">6.5</td>
+		<td class="mathematics">7.2</td>
+		<td class="mathematics">7.9</td>
+		<td class="mathematics">8.6</td>
+		<td class="mathematics">9.1</td>
+		<td class="mathematics">9.3</td>
+		<td class="mathematics">9.8</td>
+		<td class="mathematics">10.0</td>
+		<td class="mathematics">10.8</td>
+		<td class="mathematics">10.5</td>
+		<td class="mathematics">9.8</td>
+		<td class="mathematics">10.0</td>
+		<td class="mathematics">9.7</td>
+		<td class="mathematics">9.1</td>
+		<td class="mathematics">9.9</td>
+		<td class="mathematics">9.2</td>
+		<td class="mathematics">9.2</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">1.4</td>
+		<td class="computer-sciences">1.3</td>
+		<td class="computer-sciences">1.6</td>
+		<td class="computer-sciences">2.0</td>
+		<td class="computer-sciences">2.4</td>
+		<td class="computer-sciences">2.6</td>
+		<td class="computer-sciences">3.2</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">19.5</td>
+		<td class="life-sciences">21.6</td>
+		<td class="life-sciences">22.7</td>
+		<td class="life-sciences">24.8</td>
+		<td class="life-sciences">26.9</td>
+		<td class="life-sciences">29.1</td>
+		<td class="life-sciences">29.4</td>
+		<td class="life-sciences">31.0</td>
+		<td class="life-sciences">31.0</td>
+		<td class="life-sciences">31.4</td>
+		<td class="life-sciences">29.3</td>
+		<td class="life-sciences">29.3</td>
+		<td class="life-sciences">30.0</td>
+		<td class="life-sciences">31.1</td>
+		<td class="life-sciences">30.4</td>
+		<td class="life-sciences">30.9</td>
+		<td class="life-sciences">30.4</td>
+		<td class="life-sciences">29.9</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">6.4</td>
+		<td class="psychology">7.6</td>
+		<td class="psychology">7.8</td>
+		<td class="psychology">8.4</td>
+		<td class="psychology">9.7</td>
+		<td class="psychology">10.5</td>
+		<td class="psychology">10.8</td>
+		<td class="psychology">11.2</td>
+		<td class="psychology">11.5</td>
+		<td class="psychology">11.3</td>
+		<td class="psychology">10.2</td>
+		<td class="psychology">10.1</td>
+		<td class="psychology">10.7</td>
+		<td class="psychology">10.3</td>
+		<td class="psychology">10.3</td>
+		<td class="psychology">9.5</td>
+		<td class="psychology">9.1</td>
+		<td class="psychology">9.3</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">14.7</td>
+		<td class="social-sciences">16.9</td>
+		<td class="social-sciences">18.8</td>
+		<td class="social-sciences">19.5</td>
+		<td class="social-sciences">22.3</td>
+		<td class="social-sciences">23.2</td>
+		<td class="social-sciences">24.1</td>
+		<td class="social-sciences">25.3</td>
+		<td class="social-sciences">26.4</td>
+		<td class="social-sciences">25.5</td>
+		<td class="social-sciences">24.7</td>
+		<td class="social-sciences">22.8</td>
+		<td class="social-sciences">22.4</td>
+		<td class="social-sciences">23.2</td>
+		<td class="social-sciences">21.9</td>
+		<td class="social-sciences">22.4</td>
+		<td class="social-sciences">20.7</td>
+		<td class="social-sciences">20.9</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">8.7</td>
+		<td class="engineering">9.7</td>
+		<td class="engineering">10.7</td>
+		<td class="engineering">11.5</td>
+		<td class="engineering">12.2</td>
+		<td class="engineering">13.6</td>
+		<td class="engineering">13.7</td>
+		<td class="engineering">15.1</td>
+		<td class="engineering">15.7</td>
+		<td class="engineering">15.4</td>
+		<td class="engineering">15.3</td>
+		<td class="engineering">14.8</td>
+		<td class="engineering">16.1</td>
+		<td class="engineering">15.8</td>
+		<td class="engineering">15.9</td>
+		<td class="engineering">15.7</td>
+		<td class="engineering">15.0</td>
+		<td class="engineering">16.0</td>
+    </tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">4.3</td>
+		<td class="all-fields">5.4</td>
+		<td class="all-fields">6.0</td>
+		<td class="all-fields">7.0</td>
+		<td class="all-fields">8.6</td>
+		<td class="all-fields">10.7</td>
+		<td class="all-fields">12.4</td>
+		<td class="all-fields">14.0</td>
+		<td class="all-fields">15.8</td>
+		<td class="all-fields">17.6</td>
+		<td class="all-fields">18.3</td>
+		<td class="all-fields">20.3</td>
+		<td class="all-fields">22.5</td>
+		<td class="all-fields">26.1</td>
+		<td class="all-fields">28.6</td>
+		<td class="all-fields">32.3</td>
+		<td class="all-fields">34.8</td>
+		<td class="all-fields">38.8</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.6</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.2</td>
+		<td class="physical-sciences">1.5</td>
+		<td class="physical-sciences">1.9</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.4</td>
+		<td class="physical-sciences">2.7</td>
+		<td class="physical-sciences">3.1</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">1.0</td>
+		<td class="mathematics">1.0</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.3</td>
+		<td class="mathematics">1.4</td>
+		<td class="mathematics">1.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.6</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">1.5</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">1.9</td>
+		<td class="life-sciences">2.2</td>
+		<td class="life-sciences">2.7</td>
+		<td class="life-sciences">3.5</td>
+		<td class="life-sciences">4.3</td>
+		<td class="life-sciences">4.8</td>
+		<td class="life-sciences">5.4</td>
+		<td class="life-sciences">6.1</td>
+		<td class="life-sciences">6.5</td>
+		<td class="life-sciences">7.8</td>
+		<td class="life-sciences">8.3</td>
+		<td class="life-sciences">9.5</td>
+		<td class="life-sciences">10.8</td>
+		<td class="life-sciences">12.5</td>
+		<td class="life-sciences">13.3</td>
+		<td class="life-sciences">14.5</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">0.8</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.4</td>
+		<td class="psychology">2.0</td>
+		<td class="psychology">2.4</td>
+		<td class="psychology">2.7</td>
+		<td class="psychology">3.1</td>
+		<td class="psychology">3.5</td>
+		<td class="psychology">4.0</td>
+		<td class="psychology">4.1</td>
+		<td class="psychology">4.4</td>
+		<td class="psychology">4.6</td>
+		<td class="psychology">5.4</td>
+		<td class="psychology">5.6</td>
+		<td class="psychology">6.3</td>
+		<td class="psychology">7.0</td>
+		<td class="psychology">7.6</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">1.1</td>
+		<td class="social-sciences">1.5</td>
+		<td class="social-sciences">1.8</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">2.6</td>
+		<td class="social-sciences">3.1</td>
+		<td class="social-sciences">3.6</td>
+		<td class="social-sciences">4.1</td>
+		<td class="social-sciences">4.7</td>
+		<td class="social-sciences">5.1</td>
+		<td class="social-sciences">5.2</td>
+		<td class="social-sciences">5.3</td>
+		<td class="social-sciences">6.4</td>
+		<td class="social-sciences">7.0</td>
+		<td class="social-sciences">7.7</td>
+		<td class="social-sciences">8.3</td>
+		<td class="social-sciences">8.7</td>
+		<td class="social-sciences">9.8</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.8</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.2</td>
+		<td class="engineering">1.3</td>
+    </tr>  
+
+
+</tbody> 
+</table>
+
+<table class="info-table full-time-junior">
+
+<caption>
+        US science, engineering and health doctorate holders employed as full-time junior faculty members in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+        <th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">29.3</td>
+		<td class="all-fields">32.1</td>
+		<td class="all-fields">34.9</td>
+		<td class="all-fields">34.0</td>
+		<td class="all-fields">34.6</td>
+		<td class="all-fields">32.8</td>
+		<td class="all-fields">37.2</td>
+		<td class="all-fields">37.2</td>
+		<td class="all-fields">38.7</td>
+		<td class="all-fields">40.1</td>
+		<td class="all-fields">43.8</td>
+		<td class="all-fields">44.0</td>
+		<td class="all-fields">46.4</td>
+		<td class="all-fields">47.4</td>
+		<td class="all-fields">50.5</td>
+		<td class="all-fields">53.0</td>
+		<td class="all-fields">57.7</td>
+		<td class="all-fields">54.6</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">5.6</td>
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">5.7</td>
+		<td class="physical-sciences">4.7</td>
+		<td class="physical-sciences">4.6</td>
+		<td class="physical-sciences">4.0</td>
+		<td class="physical-sciences">4.6</td>
+		<td class="physical-sciences">4.7</td>
+		<td class="physical-sciences">4.8</td>
+		<td class="physical-sciences">5.0</td>
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">5.6</td>
+		<td class="physical-sciences">6.1</td>
+		<td class="physical-sciences">6.6</td>
+		<td class="physical-sciences">6.7</td>
+		<td class="physical-sciences">7.2</td>
+		<td class="physical-sciences">7.5</td>
+		<td class="physical-sciences">6.9</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">3.3</td>
+		<td class="mathematics">3.5</td>
+		<td class="mathematics">3.3</td>
+		<td class="mathematics">3.1</td>
+		<td class="mathematics">2.6</td>
+		<td class="mathematics">2.5</td>
+		<td class="mathematics">2.7</td>
+		<td class="mathematics">2.4</td>
+		<td class="mathematics">2.6</td>
+		<td class="mathematics">2.4</td>
+		<td class="mathematics">3.2</td>
+		<td class="mathematics">2.4</td>
+		<td class="mathematics">2.8</td>
+		<td class="mathematics">2.4</td>
+		<td class="mathematics">2.3</td>
+		<td class="mathematics">3.0</td>
+		<td class="mathematics">3.4</td>
+		<td class="mathematics">3.4</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">1.0</td>
+		<td class="computer-sciences">1.4</td>
+		<td class="computer-sciences">1.2</td>
+		<td class="computer-sciences">1.3</td>
+		<td class="computer-sciences">1.2</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">1.3</td>
+		<td class="computer-sciences">1.7</td>
+		<td class="computer-sciences">1.9</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">8.5</td>
+		<td class="life-sciences">9.7</td>
+		<td class="life-sciences">10.3</td>
+		<td class="life-sciences">10.3</td>
+		<td class="life-sciences">11.3</td>
+		<td class="life-sciences">10.8</td>
+		<td class="life-sciences">11.9</td>
+		<td class="life-sciences">12.3</td>
+		<td class="life-sciences">12.8</td>
+		<td class="life-sciences">13.7</td>
+		<td class="life-sciences">15.0</td>
+		<td class="life-sciences">15.6</td>
+		<td class="life-sciences">16.9</td>
+		<td class="life-sciences">17.5</td>
+		<td class="life-sciences">19.2</td>
+		<td class="life-sciences">20.3</td>
+		<td class="life-sciences">20.8</td>
+		<td class="life-sciences">20.4</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">3.6</td>
+		<td class="psychology">4.2</td>
+		<td class="psychology">4.8</td>
+		<td class="psychology">4.4</td>
+		<td class="psychology">4.8</td>
+		<td class="psychology">4.5</td>
+		<td class="psychology">5.0</td>
+		<td class="psychology">4.9</td>
+		<td class="psychology">5.2</td>
+		<td class="psychology">5.4</td>
+		<td class="psychology">5.2</td>
+		<td class="psychology">5.5</td>
+		<td class="psychology">5.5</td>
+		<td class="psychology">6.2</td>
+		<td class="psychology">6.6</td>
+		<td class="psychology">6.3</td>
+		<td class="psychology">7.6</td>
+		<td class="psychology">6.4</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">5.7</td>
+		<td class="social-sciences">7.1</td>
+		<td class="social-sciences">8.2</td>
+		<td class="social-sciences">8.6</td>
+		<td class="social-sciences">8.8</td>
+		<td class="social-sciences">8.1</td>
+		<td class="social-sciences">8.4</td>
+		<td class="social-sciences">8.2</td>
+		<td class="social-sciences">7.9</td>
+		<td class="social-sciences">8.4</td>
+		<td class="social-sciences">9.3</td>
+		<td class="social-sciences">9.0</td>
+		<td class="social-sciences">8.9</td>
+		<td class="social-sciences">9.1</td>
+		<td class="social-sciences">9.6</td>
+		<td class="social-sciences">9.5</td>
+		<td class="social-sciences">10.5</td>
+		<td class="social-sciences">10.3</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">2.6</td>
+		<td class="engineering">2.5</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">2.8</td>
+		<td class="engineering">2.3</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">4.0</td>
+		<td class="engineering">4.0</td>
+		<td class="engineering">4.3</td>
+		<td class="engineering">4.3</td>
+		<td class="engineering">4.5</td>
+		<td class="engineering">4.8</td>
+		<td class="engineering">5.0</td>
+		<td class="engineering">4.5</td>
+		<td class="engineering">5.1</td>
+		<td class="engineering">5.5</td>
+		<td class="engineering">6.1</td>
+		<td class="engineering">5.2</td>
+    </tr>
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">26.0</td>
+		<td class="all-fields">27.5</td>
+		<td class="all-fields">28.9</td>
+		<td class="all-fields">27.3</td>
+		<td class="all-fields">27.1</td>
+		<td class="all-fields">25.2</td>
+		<td class="all-fields">27.8</td>
+		<td class="all-fields">27.2</td>
+		<td class="all-fields">27.6</td>
+		<td class="all-fields">28.1</td>
+		<td class="all-fields">29.7</td>
+		<td class="all-fields">28.5</td>
+		<td class="all-fields">29.5</td>
+		<td class="all-fields">30.1</td>
+		<td class="all-fields">31.0</td>
+		<td class="all-fields">31.5</td>
+		<td class="all-fields">33.3</td>
+		<td class="all-fields">31.7</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">4.9</td>
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">4.3</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">3.5</td>
+		<td class="physical-sciences">3.9</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">4.2</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">4.5</td>
+		<td class="physical-sciences">5.1</td>
+		<td class="physical-sciences">5.1</td>
+		<td class="physical-sciences">5.5</td>
+		<td class="physical-sciences">5.6</td>
+		<td class="physical-sciences">5.0</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">3.1</td>
+		<td class="mathematics">3.2</td>
+		<td class="mathematics">2.9</td>
+		<td class="mathematics">2.7</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">2.3</td>
+		<td class="mathematics">2.0</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">2.7</td>
+		<td class="mathematics">2.0</td>
+		<td class="mathematics">2.2</td>
+		<td class="mathematics">1.7</td>
+		<td class="mathematics">1.7</td>
+		<td class="mathematics">2.1</td>
+		<td class="mathematics">2.4</td>
+		<td class="mathematics">2.4</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">0.8</td>
+		<td class="computer-sciences">1.1</td>
+		<td class="computer-sciences">1.0</td>
+		<td class="computer-sciences">1.0</td>
+		<td class="computer-sciences">0.9</td>
+		<td class="computer-sciences">0.7</td>
+		<td class="computer-sciences">1.0</td>
+		<td class="computer-sciences">1.3</td>
+		<td class="computer-sciences">1.4</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">7.5</td>
+		<td class="life-sciences">8.1</td>
+		<td class="life-sciences">8.4</td>
+		<td class="life-sciences">8.1</td>
+		<td class="life-sciences">8.9</td>
+		<td class="life-sciences">8.1</td>
+		<td class="life-sciences">8.5</td>
+		<td class="life-sciences">8.5</td>
+		<td class="life-sciences">8.4</td>
+		<td class="life-sciences">8.8</td>
+		<td class="life-sciences">9.5</td>
+		<td class="life-sciences">9.5</td>
+		<td class="life-sciences">9.8</td>
+		<td class="life-sciences">10.4</td>
+		<td class="life-sciences">11.0</td>
+		<td class="life-sciences">11.2</td>
+		<td class="life-sciences">11.1</td>
+		<td class="life-sciences">10.8</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">2.7</td>
+		<td class="psychology">3.0</td>
+		<td class="psychology">3.3</td>
+		<td class="psychology">2.8</td>
+		<td class="psychology">3.0</td>
+		<td class="psychology">2.6</td>
+		<td class="psychology">2.7</td>
+		<td class="psychology">2.7</td>
+		<td class="psychology">2.9</td>
+		<td class="psychology">3.0</td>
+		<td class="psychology">2.3</td>
+		<td class="psychology">2.4</td>
+		<td class="psychology">2.1</td>
+		<td class="psychology">2.7</td>
+		<td class="psychology">2.7</td>
+		<td class="psychology">2.4</td>
+		<td class="psychology">2.8</td>
+		<td class="psychology">2.4</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">5.0</td>
+		<td class="social-sciences">5.9</td>
+		<td class="social-sciences">6.5</td>
+		<td class="social-sciences">6.6</td>
+		<td class="social-sciences">6.5</td>
+		<td class="social-sciences">5.9</td>
+		<td class="social-sciences">6.0</td>
+		<td class="social-sciences">5.6</td>
+		<td class="social-sciences">5.2</td>
+		<td class="social-sciences">5.3</td>
+		<td class="social-sciences">5.9</td>
+		<td class="social-sciences">5.5</td>
+		<td class="social-sciences">5.5</td>
+		<td class="social-sciences">5.4</td>
+		<td class="social-sciences">5.5</td>
+		<td class="social-sciences">4.9</td>
+		<td class="social-sciences">5.3</td>
+		<td class="social-sciences">5.8</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">2.6</td>
+		<td class="engineering">2.4</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">2.2</td>
+		<td class="engineering">2.6</td>
+		<td class="engineering">3.8</td>
+		<td class="engineering">3.8</td>
+		<td class="engineering">4.0</td>
+		<td class="engineering">3.9</td>
+		<td class="engineering">4.0</td>
+		<td class="engineering">4.1</td>
+		<td class="engineering">4.4</td>
+		<td class="engineering">3.9</td>
+		<td class="engineering">4.3</td>
+		<td class="engineering">4.5</td>
+		<td class="engineering">4.8</td>
+		<td class="engineering">3.9</td>
+    </tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">3.3</td>
+		<td class="all-fields">4.6</td>
+		<td class="all-fields">6.0</td>
+		<td class="all-fields">6.8</td>
+		<td class="all-fields">7.5</td>
+		<td class="all-fields">7.7</td>
+		<td class="all-fields">9.4</td>
+		<td class="all-fields">10.0</td>
+		<td class="all-fields">11.2</td>
+		<td class="all-fields">12.0</td>
+		<td class="all-fields">14.1</td>
+		<td class="all-fields">15.6</td>
+		<td class="all-fields">17.0</td>
+		<td class="all-fields">17.3</td>
+		<td class="all-fields">19.4</td>
+		<td class="all-fields">21.5</td>
+		<td class="all-fields">24.4</td>
+		<td class="all-fields">22.9</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.6</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.5</td>
+		<td class="physical-sciences">1.6</td>
+		<td class="physical-sciences">1.5</td>
+		<td class="physical-sciences">1.6</td>
+		<td class="physical-sciences">1.7</td>
+		<td class="physical-sciences">1.9</td>
+		<td class="physical-sciences">1.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.0</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.4</td>
+		<td class="computer-sciences">0.5</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">1.1</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.9</td>
+		<td class="life-sciences">2.2</td>
+		<td class="life-sciences">2.4</td>
+		<td class="life-sciences">2.7</td>
+		<td class="life-sciences">3.4</td>
+		<td class="life-sciences">3.8</td>
+		<td class="life-sciences">4.5</td>
+		<td class="life-sciences">4.9</td>
+		<td class="life-sciences">5.5</td>
+		<td class="life-sciences">6.1</td>
+		<td class="life-sciences">7.1</td>
+		<td class="life-sciences">7.1</td>
+		<td class="life-sciences">8.1</td>
+		<td class="life-sciences">9.1</td>
+		<td class="life-sciences">9.7</td>
+		<td class="life-sciences">9.6</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">0.9</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.5</td>
+		<td class="psychology">1.6</td>
+		<td class="psychology">1.8</td>
+		<td class="psychology">1.9</td>
+		<td class="psychology">2.3</td>
+		<td class="psychology">2.2</td>
+		<td class="psychology">2.3</td>
+		<td class="psychology">2.4</td>
+		<td class="psychology">2.9</td>
+		<td class="psychology">3.1</td>
+		<td class="psychology">3.4</td>
+		<td class="psychology">3.5</td>
+		<td class="psychology">3.9</td>
+		<td class="psychology">3.9</td>
+		<td class="psychology">4.8</td>
+		<td class="psychology">4.0</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">1.2</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">2.1</td>
+		<td class="social-sciences">2.3</td>
+		<td class="social-sciences">2.1</td>
+		<td class="social-sciences">2.4</td>
+		<td class="social-sciences">2.6</td>
+		<td class="social-sciences">2.7</td>
+		<td class="social-sciences">3.0</td>
+		<td class="social-sciences">3.4</td>
+		<td class="social-sciences">3.5</td>
+		<td class="social-sciences">3.5</td>
+		<td class="social-sciences">3.7</td>
+		<td class="social-sciences">4.1</td>
+		<td class="social-sciences">4.6</td>
+		<td class="social-sciences">5.2</td>
+		<td class="social-sciences">4.5</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.7</td>
+		<td class="engineering">0.6</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.8</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.3</td>
+		<td class="engineering">1.3</td>
+    </tr>  
+
+
+</tbody> 
+</table>
+
+<table class="info-table other-full-time">
+
+<caption>
+        US science, engineering and health doctorate holders employed in other full-time positions in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+        <th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+	
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">7.6</td>
+		<td class="all-fields">8.3</td>
+		<td class="all-fields">8.8</td>
+		<td class="all-fields">11.4</td>
+		<td class="all-fields">12.6</td>
+		<td class="all-fields">13.4</td>
+		<td class="all-fields">18.1</td>
+		<td class="all-fields">16.4</td>
+		<td class="all-fields">19.2</td>
+		<td class="all-fields">20.2</td>
+		<td class="all-fields">22.2</td>
+		<td class="all-fields">23.9</td>
+		<td class="all-fields">26.4</td>
+		<td class="all-fields">29.3</td>
+		<td class="all-fields">31.7</td>
+		<td class="all-fields">35.4</td>
+		<td class="all-fields">36.7</td>
+		<td class="all-fields">39.9</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">2.4</td>
+		<td class="physical-sciences">2.5</td>
+		<td class="physical-sciences">2.9</td>
+		<td class="physical-sciences">3.0</td>
+		<td class="physical-sciences">3.7</td>
+		<td class="physical-sciences">3.4</td>
+		<td class="physical-sciences">4.0</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">4.8</td>
+		<td class="physical-sciences">4.9</td>
+		<td class="physical-sciences">6.1</td>
+		<td class="physical-sciences">6.8</td>
+		<td class="physical-sciences">7.1</td>
+		<td class="physical-sciences">7.7</td>
+		<td class="physical-sciences">6.4</td>
+		<td class="physical-sciences">6.8</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">1.0</td>
+		<td class="mathematics">1.2</td>
+		<td class="mathematics">1.1</td>
+		<td class="mathematics">1.4</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.3</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.8</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">2.5</td>
+		<td class="life-sciences">2.4</td>
+		<td class="life-sciences">2.8</td>
+		<td class="life-sciences">3.9</td>
+		<td class="life-sciences">4.0</td>
+		<td class="life-sciences">4.6</td>
+		<td class="life-sciences">6.2</td>
+		<td class="life-sciences">6.0</td>
+		<td class="life-sciences">6.7</td>
+		<td class="life-sciences">7.2</td>
+		<td class="life-sciences">7.7</td>
+		<td class="life-sciences">8.4</td>
+		<td class="life-sciences">8.4</td>
+		<td class="life-sciences">9.5</td>
+		<td class="life-sciences">10.5</td>
+		<td class="life-sciences">12.2</td>
+		<td class="life-sciences">13.8</td>
+		<td class="life-sciences">14.5</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">0.8</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.8</td>
+		<td class="psychology">2.2</td>
+		<td class="psychology">2.2</td>
+		<td class="psychology">2.9</td>
+		<td class="psychology">2.8</td>
+		<td class="psychology">2.9</td>
+		<td class="psychology">2.8</td>
+		<td class="psychology">3.9</td>
+		<td class="psychology">3.9</td>
+		<td class="psychology">4.0</td>
+		<td class="psychology">4.6</td>
+		<td class="psychology">4.9</td>
+		<td class="psychology">5.7</td>
+		<td class="psychology">6.0</td>
+		<td class="psychology">6.3</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">1.0</td>
+		<td class="social-sciences">1.5</td>
+		<td class="social-sciences">1.2</td>
+		<td class="social-sciences">1.9</td>
+		<td class="social-sciences">2.0</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">3.2</td>
+		<td class="social-sciences">2.6</td>
+		<td class="social-sciences">3.5</td>
+		<td class="social-sciences">3.5</td>
+		<td class="social-sciences">3.7</td>
+		<td class="social-sciences">3.6</td>
+		<td class="social-sciences">3.9</td>
+		<td class="social-sciences">4.3</td>
+		<td class="social-sciences">4.5</td>
+		<td class="social-sciences">4.4</td>
+		<td class="social-sciences">5.6</td>
+		<td class="social-sciences">5.6</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">0.8</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">0.8</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">1.8</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">2.1</td>
+		<td class="engineering">3.1</td>
+		<td class="engineering">3.0</td>
+		<td class="engineering">3.4</td>
+		<td class="engineering">3.6</td>
+		<td class="engineering">3.1</td>
+		<td class="engineering">4.4</td>
+    </tr>
+
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">6.5</td>
+		<td class="all-fields">7.2</td>
+		<td class="all-fields">7.4</td>
+		<td class="all-fields">9.4</td>
+		<td class="all-fields">10.0</td>
+		<td class="all-fields">10.3</td>
+		<td class="all-fields">14.3</td>
+		<td class="all-fields">12.0</td>
+		<td class="all-fields">13.9</td>
+		<td class="all-fields">14.4</td>
+		<td class="all-fields">15.4</td>
+		<td class="all-fields">16.1</td>
+		<td class="all-fields">18.0</td>
+		<td class="all-fields">20.5</td>
+		<td class="all-fields">21.4</td>
+		<td class="all-fields">23.7</td>
+		<td class="all-fields">23.4</td>
+		<td class="all-fields">23.6</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">2.3</td>
+		<td class="physical-sciences">2.6</td>
+		<td class="physical-sciences">2.7</td>
+		<td class="physical-sciences">3.4</td>
+		<td class="physical-sciences">2.9</td>
+		<td class="physical-sciences">3.5</td>
+		<td class="physical-sciences">3.6</td>
+		<td class="physical-sciences">4.2</td>
+		<td class="physical-sciences">4.1</td>
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">6.0</td>
+		<td class="physical-sciences">6.1</td>
+		<td class="physical-sciences">6.6</td>
+		<td class="physical-sciences">5.2</td>
+		<td class="physical-sciences">5.4</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">1.0</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.6</td>
+		<td class="computer-sciences">0.5</td>
+		<td class="computer-sciences">0.7</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">2.0</td>
+		<td class="life-sciences">1.9</td>
+		<td class="life-sciences">2.2</td>
+		<td class="life-sciences">3.0</td>
+		<td class="life-sciences">3.0</td>
+		<td class="life-sciences">3.2</td>
+		<td class="life-sciences">4.6</td>
+		<td class="life-sciences">4.1</td>
+		<td class="life-sciences">4.6</td>
+		<td class="life-sciences">4.9</td>
+		<td class="life-sciences">5.1</td>
+		<td class="life-sciences">5.6</td>
+		<td class="life-sciences">5.3</td>
+		<td class="life-sciences">6.2</td>
+		<td class="life-sciences">6.5</td>
+		<td class="life-sciences">7.4</td>
+		<td class="life-sciences">8.3</td>
+		<td class="life-sciences">7.7</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.9</td>
+		<td class="psychology">1.4</td>
+		<td class="psychology">1.4</td>
+		<td class="psychology">1.4</td>
+		<td class="psychology">1.8</td>
+		<td class="psychology">1.6</td>
+		<td class="psychology">1.5</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.9</td>
+		<td class="psychology">1.7</td>
+		<td class="psychology">1.8</td>
+		<td class="psychology">2.1</td>
+		<td class="psychology">2.0</td>
+		<td class="psychology">2.5</td>
+		<td class="psychology">2.6</td>
+		<td class="psychology">2.4</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">1.3</td>
+		<td class="social-sciences">0.9</td>
+		<td class="social-sciences">1.6</td>
+		<td class="social-sciences">1.6</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">2.5</td>
+		<td class="social-sciences">1.8</td>
+		<td class="social-sciences">2.4</td>
+		<td class="social-sciences">2.4</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">2.1</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">2.6</td>
+		<td class="social-sciences">2.7</td>
+		<td class="social-sciences">2.7</td>
+		<td class="social-sciences">3.3</td>
+		<td class="social-sciences">2.9</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">0.8</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">0.8</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.4</td>
+		<td class="engineering">1.7</td>
+		<td class="engineering">1.5</td>
+		<td class="engineering">2.0</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">2.6</td>
+		<td class="engineering">3.1</td>
+		<td class="engineering">3.1</td>
+		<td class="engineering">2.7</td>
+		<td class="engineering">3.7</td>
+    </tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">1.1</td>
+		<td class="all-fields">1.0</td>
+		<td class="all-fields">1.4</td>
+		<td class="all-fields">2.0</td>
+		<td class="all-fields">2.6</td>
+		<td class="all-fields">3.1</td>
+		<td class="all-fields">3.8</td>
+		<td class="all-fields">4.5</td>
+		<td class="all-fields">5.3</td>
+		<td class="all-fields">5.8</td>
+		<td class="all-fields">6.7</td>
+		<td class="all-fields">7.7</td>
+		<td class="all-fields">8.4</td>
+		<td class="all-fields">8.8</td>
+		<td class="all-fields">10.4</td>
+		<td class="all-fields">11.7</td>
+		<td class="all-fields">13.3</td>
+		<td class="all-fields">16.3</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.1</td>
+		<td class="physical-sciences">0.1</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.6</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.2</td>
+		<td class="physical-sciences">1.4</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">0.6</td>
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.6</td>
+		<td class="life-sciences">0.9</td>
+		<td class="life-sciences">1.0</td>
+		<td class="life-sciences">1.3</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">2.1</td>
+		<td class="life-sciences">2.4</td>
+		<td class="life-sciences">2.6</td>
+		<td class="life-sciences">2.8</td>
+		<td class="life-sciences">3.1</td>
+		<td class="life-sciences">3.3</td>
+		<td class="life-sciences">4.0</td>
+		<td class="life-sciences">4.8</td>
+		<td class="life-sciences">5.5</td>
+		<td class="life-sciences">6.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.3</td>
+		<td class="psychology">1.4</td>
+		<td class="psychology">1.6</td>
+		<td class="psychology">2.0</td>
+		<td class="psychology">2.2</td>
+		<td class="psychology">2.2</td>
+		<td class="psychology">2.5</td>
+		<td class="psychology">2.9</td>
+		<td class="psychology">3.1</td>
+		<td class="psychology">3.4</td>
+		<td class="psychology">3.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.7</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">1.1</td>
+		<td class="social-sciences">1.1</td>
+		<td class="social-sciences">1.5</td>
+		<td class="social-sciences">1.5</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">1.8</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">2.3</td>
+		<td class="social-sciences">2.7</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.7</td>
+    </tr> 
+
+
+</tbody> 
+</table>
+
+<table class="info-table part-time">
+
+<caption>
+        US science, engineering and health doctorate holders employed in part-time positions in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+        <th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">2.9</td>
+		<td class="all-fields">3.2</td>
+		<td class="all-fields">3.4</td>
+		<td class="all-fields">4.5</td>
+		<td class="all-fields">4.0</td>
+		<td class="all-fields">6.0</td>
+		<td class="all-fields">6.5</td>
+		<td class="all-fields">5.7</td>
+		<td class="all-fields">6.2</td>
+		<td class="all-fields">7.4</td>
+		<td class="all-fields">5.9</td>
+		<td class="all-fields">5.5</td>
+		<td class="all-fields">8.9</td>
+		<td class="all-fields">8.2</td>
+		<td class="all-fields">9.0</td>
+		<td class="all-fields">13.3</td>
+		<td class="all-fields">15.7</td>
+		<td class="all-fields">15.4</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">1.2</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">1.2</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.5</td>
+		<td class="physical-sciences">1.6</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.7</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">1.2</td>
+		<td class="mathematics">1.0</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">0.9</td>
+		<td class="life-sciences">0.9</td>
+		<td class="life-sciences">1.0</td>
+		<td class="life-sciences">1.2</td>
+		<td class="life-sciences">1.2</td>
+		<td class="life-sciences">1.7</td>
+		<td class="life-sciences">1.7</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.9</td>
+		<td class="life-sciences">2.3</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.2</td>
+		<td class="life-sciences">2.9</td>
+		<td class="life-sciences">2.6</td>
+		<td class="life-sciences">2.4</td>
+		<td class="life-sciences">4.0</td>
+		<td class="life-sciences">4.4</td>
+		<td class="life-sciences">4.3</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.3</td>
+		<td class="psychology">1.8</td>
+		<td class="psychology">3.2</td>
+		<td class="psychology">3.6</td>
+		<td class="psychology">3.7</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">0.7</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">1.0</td>
+		<td class="social-sciences">1.0</td>
+		<td class="social-sciences">1.6</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">1.8</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">2.0</td>
+		<td class="social-sciences">1.3</td>
+		<td class="social-sciences">1.3</td>
+		<td class="social-sciences">2.6</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">2.7</td>
+		<td class="social-sciences">3.1</td>
+		<td class="social-sciences">3.7</td>
+		<td class="social-sciences">3.9</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.8</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">0.8</td>
+    </tr>
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">1.5</td>
+		<td class="all-fields">1.8</td>
+		<td class="all-fields">1.8</td>
+		<td class="all-fields">2.7</td>
+		<td class="all-fields">1.9</td>
+		<td class="all-fields">3.5</td>
+		<td class="all-fields">3.6</td>
+		<td class="all-fields">2.7</td>
+		<td class="all-fields">3.1</td>
+		<td class="all-fields">3.8</td>
+		<td class="all-fields">2.3</td>
+		<td class="all-fields">2.4</td>
+		<td class="all-fields">4.4</td>
+		<td class="all-fields">3.4</td>
+		<td class="all-fields">3.8</td>
+		<td class="all-fields">6.1</td>
+		<td class="all-fields">7.6</td>
+		<td class="all-fields">6.9</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.6</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.9</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.6</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">1.1</td>
+		<td class="physical-sciences">1.1</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.9</td>
+		<td class="mathematics">0.6</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">0.4</td>
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.4</td>
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.4</td>
+		<td class="life-sciences">0.7</td>
+		<td class="life-sciences">0.7</td>
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.8</td>
+		<td class="life-sciences">1.0</td>
+		<td class="life-sciences">0.4</td>
+		<td class="life-sciences">0.3</td>
+		<td class="life-sciences">1.3</td>
+		<td class="life-sciences">0.8</td>
+		<td class="life-sciences">0.7</td>
+		<td class="life-sciences">1.3</td>
+		<td class="life-sciences">1.5</td>
+		<td class="life-sciences">1.4</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.9</td>
+		<td class="psychology">1.0</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.6</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">1.1</td>
+		<td class="social-sciences">1.4</td>
+		<td class="social-sciences">1.0</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">1.2</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.7</td>
+		<td class="social-sciences">1.4</td>
+		<td class="social-sciences">1.0</td>
+		<td class="social-sciences">1.4</td>
+		<td class="social-sciences">1.7</td>
+		<td class="social-sciences">2.2</td>
+		<td class="social-sciences">2.2</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.7</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">0.6</td>
+    </tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">1.4</td>
+		<td class="all-fields">1.5</td>
+		<td class="all-fields">1.6</td>
+		<td class="all-fields">1.9</td>
+		<td class="all-fields">2.1</td>
+		<td class="all-fields">2.5</td>
+		<td class="all-fields">2.9</td>
+		<td class="all-fields">3.0</td>
+		<td class="all-fields">3.1</td>
+		<td class="all-fields">3.5</td>
+		<td class="all-fields">3.6</td>
+		<td class="all-fields">3.1</td>
+		<td class="all-fields">4.5</td>
+		<td class="all-fields">4.9</td>
+		<td class="all-fields">5.1</td>
+		<td class="all-fields">7.3</td>
+		<td class="all-fields">8.1</td>
+		<td class="all-fields">8.5</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">0.5</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.4</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.4</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.5</td>
+		<td class="life-sciences">0.6</td>
+		<td class="life-sciences">0.6</td>
+		<td class="life-sciences">0.7</td>
+		<td class="life-sciences">0.9</td>
+		<td class="life-sciences">1.0</td>
+		<td class="life-sciences">1.1</td>
+		<td class="life-sciences">1.1</td>
+		<td class="life-sciences">1.3</td>
+		<td class="life-sciences">1.2</td>
+		<td class="life-sciences">0.9</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">1.7</td>
+		<td class="life-sciences">2.7</td>
+		<td class="life-sciences">3.0</td>
+		<td class="life-sciences">2.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.9</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">1.0</td>
+		<td class="psychology">1.5</td>
+		<td class="psychology">2.4</td>
+		<td class="psychology">2.8</td>
+		<td class="psychology">2.7</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.9</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">0.8</td>
+		<td class="social-sciences">0.7</td>
+		<td class="social-sciences">1.2</td>
+		<td class="social-sciences">1.2</td>
+		<td class="social-sciences">1.3</td>
+		<td class="social-sciences">1.4</td>
+		<td class="social-sciences">1.5</td>
+		<td class="social-sciences">1.7</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.3</td>
+    </tr>
+
+
+</tbody> 
+</table>
+
+<table class="info-table postdoc">
+
+<caption>
+        US science, engineering and health doctorate holders employed as postdocs in academia&#44; by sex and degree field 1973–2008 (thousands).
+</caption>
+
+<thead>   
+    <tr> 
+        <th scope="col">Gender and field</th>
+		<th scope="col">1973</th>
+		<th scope="col">1975</th>
+		<th scope="col">1977</th>
+		<th scope="col">1979</th>
+		<th scope="col">1981</th>
+		<th scope="col">1983</th>
+		<th scope="col">1985</th>
+		<th scope="col">1987</th>
+		<th scope="col">1989</th>
+		<th scope="col">1991</th>
+		<th scope="col">1993</th>
+		<th scope="col">1995</th>
+		<th scope="col">1997</th>
+		<th scope="col">1999</th>
+		<th scope="col">2001</th>
+		<th scope="col">2003</th>
+		<th scope="col">2006</th>
+		<th scope="col">2008</th>
+    </tr> 
+</thead>
+
+<tbody>
+
+	<tr class="both-sexes"> 
+		<th scope="row" class="key-row">Both sexes&#44; all fields</th> 
+		<td class="all-fields">4.2</td>
+		<td class="all-fields">6.2</td>
+		<td class="all-fields">7.6</td>
+		<td class="all-fields">8.1</td>
+		<td class="all-fields">8.5</td>
+		<td class="all-fields">8.3</td>
+		<td class="all-fields">8.7</td>
+		<td class="all-fields">9.3</td>
+		<td class="all-fields">11.5</td>
+		<td class="all-fields">9.9</td>
+		<td class="all-fields">13.3</td>
+		<td class="all-fields">16.8</td>
+		<td class="all-fields">18.9</td>
+		<td class="all-fields">18.5</td>
+		<td class="all-fields">17.5</td>
+		<td class="all-fields">15.7</td>
+		<td class="all-fields">23.3</td>
+		<td class="all-fields">18.0</td> 
+	</tr>
+	<tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Physical sciences</th> 
+		<td class="physical-sciences">1.8</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">2.4</td>
+		<td class="physical-sciences">2.0</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">1.6</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.3</td>
+		<td class="physical-sciences">2.7</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">3.5</td>
+		<td class="physical-sciences">4.4</td>
+		<td class="physical-sciences">3.8</td>
+		<td class="physical-sciences">3.4</td>
+		<td class="physical-sciences">3.0</td>
+		<td class="physical-sciences">2.6</td>
+		<td class="physical-sciences">3.9</td>
+		<td class="physical-sciences">3.3</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Mathematics</th> 
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">1.0</td>
+		<td class="mathematics">0.5</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Life sciences</th> 
+		<td class="life-sciences">1.9</td>
+		<td class="life-sciences">3.0</td>
+		<td class="life-sciences">3.9</td>
+		<td class="life-sciences">4.8</td>
+		<td class="life-sciences">5.2</td>
+		<td class="life-sciences">5.1</td>
+		<td class="life-sciences">5.3</td>
+		<td class="life-sciences">5.4</td>
+		<td class="life-sciences">6.8</td>
+		<td class="life-sciences">6.3</td>
+		<td class="life-sciences">8.2</td>
+		<td class="life-sciences">9.1</td>
+		<td class="life-sciences">10.8</td>
+		<td class="life-sciences">11.6</td>
+		<td class="life-sciences">11.0</td>
+		<td class="life-sciences">10.0</td>
+		<td class="life-sciences">12.8</td>
+		<td class="life-sciences">10.5</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Psychology</th> 
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">1.3</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">1.2</td>
+		<td class="psychology">0.9</td>
+		<td class="psychology">1.7</td>
+		<td class="psychology">1.0</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Social sciences</th> 
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.6</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.7</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.6</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.9</td>
+		<td class="social-sciences">0.3</td>
+    </tr>
+    <tr class="both-sexes"> 
+		<th scope="row">Both sexes&#44; Engineering</th> 
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.6</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.2</td>
+		<td class="engineering">1.7</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">1.1</td>
+		<td class="engineering">3.0</td>
+		<td class="engineering">2.1</td>
+    </tr>
+
+
+	<tr class="male"> 
+		<th scope="row" class="key-row">Male&#44; all fields</th> 
+		<td class="all-fields">3.5</td>
+		<td class="all-fields">4.9</td>
+		<td class="all-fields">6.1</td>
+		<td class="all-fields">6.3</td>
+		<td class="all-fields">6.3</td>
+		<td class="all-fields">5.8</td>
+		<td class="all-fields">6.0</td>
+		<td class="all-fields">6.8</td>
+		<td class="all-fields">8.2</td>
+		<td class="all-fields">6.8</td>
+		<td class="all-fields">9.2</td>
+		<td class="all-fields">11.1</td>
+		<td class="all-fields">12.1</td>
+		<td class="all-fields">11.2</td>
+		<td class="all-fields">10.5</td>
+		<td class="all-fields">9.8</td>
+		<td class="all-fields">13.8</td>
+		<td class="all-fields">10.9</td> 
+	</tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Physical sciences</th> 
+		<td class="physical-sciences">1.6</td>
+		<td class="physical-sciences">2.0</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">1.8</td>
+		<td class="physical-sciences">1.8</td>
+		<td class="physical-sciences">1.4</td>
+		<td class="physical-sciences">1.7</td>
+		<td class="physical-sciences">1.9</td>
+		<td class="physical-sciences">2.2</td>
+		<td class="physical-sciences">1.8</td>
+		<td class="physical-sciences">2.9</td>
+		<td class="physical-sciences">3.7</td>
+		<td class="physical-sciences">3.0</td>
+		<td class="physical-sciences">2.7</td>
+		<td class="physical-sciences">2.3</td>
+		<td class="physical-sciences">2.1</td>
+		<td class="physical-sciences">2.9</td>
+		<td class="physical-sciences">2.5</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Mathematics</th> 
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.5</td>
+		<td class="mathematics">0.6</td>
+		<td class="mathematics">0.3</td>
+		<td class="mathematics">0.8</td>
+		<td class="mathematics">0.4</td>
+    </tr>
+    <tr class="male"> 
+		<th scope="row">Male&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.1</td>
+		<td class="computer-sciences">0.2</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Life sciences</th> 
+		<td class="life-sciences">1.5</td>
+		<td class="life-sciences">2.2</td>
+		<td class="life-sciences">2.9</td>
+		<td class="life-sciences">3.5</td>
+		<td class="life-sciences">3.6</td>
+		<td class="life-sciences">3.3</td>
+		<td class="life-sciences">3.4</td>
+		<td class="life-sciences">3.8</td>
+		<td class="life-sciences">4.7</td>
+		<td class="life-sciences">4.1</td>
+		<td class="life-sciences">5.2</td>
+		<td class="life-sciences">5.5</td>
+		<td class="life-sciences">6.2</td>
+		<td class="life-sciences">6.6</td>
+		<td class="life-sciences">6.2</td>
+		<td class="life-sciences">5.7</td>
+		<td class="life-sciences">6.7</td>
+		<td class="life-sciences">5.6</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Psychology</th> 
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.6</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.5</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Social sciences</th> 
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.4</td>
+		<td class="social-sciences">0.1</td>
+    </tr>
+	<tr class="male"> 
+		<th scope="row">Male&#44; Engineering</th> 
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.3</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.5</td>
+		<td class="engineering">0.4</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">1.0</td>
+		<td class="engineering">1.4</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">0.7</td>
+		<td class="engineering">0.9</td>
+		<td class="engineering">2.4</td>
+		<td class="engineering">1.7</td>
+    </tr>
+
+	<tr class="female"> 
+		<th scope="row" class="key-row">Female&#44; all fields</th> 
+		<td class="all-fields">0.6</td>
+		<td class="all-fields">1.3</td>
+		<td class="all-fields">1.6</td>
+		<td class="all-fields">1.8</td>
+		<td class="all-fields">2.2</td>
+		<td class="all-fields">2.5</td>
+		<td class="all-fields">2.6</td>
+		<td class="all-fields">2.6</td>
+		<td class="all-fields">3.3</td>
+		<td class="all-fields">3.0</td>
+		<td class="all-fields">4.1</td>
+		<td class="all-fields">5.7</td>
+		<td class="all-fields">6.8</td>
+		<td class="all-fields">7.3</td>
+		<td class="all-fields">6.9</td>
+		<td class="all-fields">6.0</td>
+		<td class="all-fields">9.5</td>
+		<td class="all-fields">7.1</td> 
+	</tr>
+	<tr class="female"> 
+		<th scope="row">Female&#44; Physical sciences</th> 
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.2</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.4</td>
+		<td class="physical-sciences">0.3</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.8</td>
+		<td class="physical-sciences">0.7</td>
+		<td class="physical-sciences">0.5</td>
+		<td class="physical-sciences">1.0</td>
+		<td class="physical-sciences">0.8</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Mathematics</th> 
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.0</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.2</td>
+		<td class="mathematics">0.1</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Computer sciences</th> 
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+		<td class="computer-sciences">0.0</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Life sciences</th> 
+		<td class="life-sciences">0.4</td>
+		<td class="life-sciences">0.8</td>
+		<td class="life-sciences">1.1</td>
+		<td class="life-sciences">1.2</td>
+		<td class="life-sciences">1.6</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">1.8</td>
+		<td class="life-sciences">2.2</td>
+		<td class="life-sciences">2.3</td>
+		<td class="life-sciences">3.0</td>
+		<td class="life-sciences">3.7</td>
+		<td class="life-sciences">4.6</td>
+		<td class="life-sciences">5.1</td>
+		<td class="life-sciences">4.7</td>
+		<td class="life-sciences">4.3</td>
+		<td class="life-sciences">6.1</td>
+		<td class="life-sciences">4.9</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Psychology</th> 
+		<td class="psychology">0.0</td>
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.1</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.2</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.4</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.3</td>
+		<td class="psychology">0.7</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.9</td>
+		<td class="psychology">0.8</td>
+		<td class="psychology">0.5</td>
+		<td class="psychology">1.1</td>
+		<td class="psychology">0.6</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Social sciences</th> 
+		<td class="social-sciences">0.0</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.1</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.3</td>
+		<td class="social-sciences">0.2</td>
+		<td class="social-sciences">0.5</td>
+		<td class="social-sciences">0.2</td>
+    </tr>
+    <tr class="female"> 
+		<th scope="row">Female&#44; Engineering</th> 
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.0</td>
+		<td class="engineering">0.1</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.2</td>
+		<td class="engineering">0.6</td>
+		<td class="engineering">0.4</td>
+    </tr>
+
+
+</tbody> 
+</table>
+
+<p class="credit">Data source: National Science Foundation <a href="http://www.nsf.gov/statistics/seind12/append/c5/at05-17.pdf">http://www.nsf.gov/statistics/seind12/append/c5/at05-17.pdf</a></p>
+
+</div> <!-- info-table-wrapper -->
+
+<div class="salary-table-wrapper">
+
+<table class="salary-table all-occupations">
+
+<caption>
+Median annual salary of scientists and engineers employed full time in all occupations, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">60000</td>	<td class="male">84000</td> 	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">44000</td>	<td class="male">53000</td> 	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">59000</td>	<td class="male">79000</td> 	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">68000</td>	<td class="male">95000</td> 	</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">63000</td>	<td class="male">91000</td> 	</tr>
+<tr class="bachelors all-ages">						<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">52000</td>	<td class="male">75000</td> 	</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">40000</td>	<td class="male">50000</td> 	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">54000</td>	<td class="male">73000</td> 	</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49 </th>	<td class="female">60000</td>	<td class="male">85000</td> 	</tr>
+<tr class="bachelors fifty-to-seventy-five"	>		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">56000</td>	<td class="male">80000</td> 	</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">63000</td>	<td class="male">90000</td> 	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">49000</td>	<td class="male">62000</td> 	</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">60000</td>	<td class="male">85000</td> 	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49 </th>	<td class="female">71000</td>	<td class="male">100000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">66000</td>	<td class="male">91000</td> 	</tr>
+<tr class="doctorate all-ages">						<th scope="row">Doctorate&#44; all ages</th>	<td class="female">77000</td>	<td class="male">100000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">52000</td>	<td class="male">75000</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">69000</td>	<td class="male">80000</td>		</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49 </th>	<td class="female">80000</td>	<td class="male">100000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">86000</td>	<td class="male">110000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table s-and-e-occupations">
+
+<caption>
+Median annual salary of scientists and engineers employed full time in S&#38;E occupations, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">70000</td>	<td class="male">85000</td>		</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">50000</td>	<td class="male">60000</td>		</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">70000</td>	<td class="male">82000</td>		</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">95000</td>		</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">78000</td>	<td class="male">95000</td>		</tr>
+<tr class="bachelors all-ages">						<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">68000</td>	<td class="male">80000</td>		</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">47000</td>	<td class="male">56000</td>		</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">70000</td>	<td class="male">80000</td>		</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">90000</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">71000</td>	<td class="male">90000</td>		</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">74000</td>	<td class="male">92000</td>		</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">54000</td>	<td class="male">68000</td>		</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">70000</td>	<td class="male">89000</td>		</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">86000</td>	<td class="male">100000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">98000</td>		</tr>
+<tr class="doctorate all-ages">						<th scope="row">Doctorate&#44; all ages</th>	<td class="female">75000</td>	<td class="male">96000</td>		</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">49000</td>	<td class="male">75000</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">67000</td>	<td class="male">80000</td>		</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">78000</td>	<td class="male">99000</td>		</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">89000</td>	<td class="male">105000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">70000</td>	<td class="male">83000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">45000</td>	<td class="male">55000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">	<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">66000</td>	<td class="male">80000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">92000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">	<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">75000</td>	<td class="male">90000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">65000</td>	<td class="male">80000</td>	</tr>
+<tr class="bachelors twenty-nine-and-younger">	<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">40000</td>	<td class="male">53000</td>	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">67000</td>	<td class="male">80000</td>	</tr>
+<tr class="bachelors forty-to-forty-nine">		<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">79000</td>	<td class="male">89000</td>	</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">70000</td>	<td class="male">85000</td>	</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">72000</td>	<td class="male">90000</td>	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">52000</td>	<td class="male">65000</td>	</tr>
+<tr class="masters thirty-to-thirty-nine">		<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">68000</td>	<td class="male">87000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">84000</td>	<td class="male">100000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">		<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">79000</td>	<td class="male">89000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">73000</td>	<td class="male">91000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">	<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">43000</td>	<td class="male">65000</td>	</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">63000</td>	<td class="male">72000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">		<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">76000</td>	<td class="male">91000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">86000</td>	<td class="male">100000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table biological-life-scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as biological life scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">54000</td>	<td class="male">65000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">35000</td>	<td class="male">30000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">	<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">55000</td>	<td class="male">56000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">70000</td>	<td class="male">73000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">	<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">69000</td>	<td class="male">82000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">45000</td>	<td class="male">50000</td>	</tr>
+<tr class="bachelors twenty-nine-and-younger">	<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">30000</td>	<td class="male">28000</td>	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">50000</td>	<td class="male">54000</td>	</tr>
+<tr class="bachelors forty-to-forty-nine">		<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">52000</td>	<td class="male">64000</td>	</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">54000</td>	<td class="male">56000</td>	</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">58000</td>	<td class="male">63000</td>	</tr>
+<tr class="masters twenty-nine-and-youn">			<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">48000</td>	<td class="male">28000</td>	</tr>
+<tr class="masters thirty-to-thirty-nine">		<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">56000</td>	<td class="male">56000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">69000</td>	<td class="male">66000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">		<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">71000</td>	<td class="male">72000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">70000</td>	<td class="male">86000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">	<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">39000</td>	<td class="male">60000</td>	</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">55000</td>	<td class="male">60000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">		<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">86000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">92000</td>	<td class="male">104000</td> 	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table computer-and-information-scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as computer and information scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">				<th scope="row">All degrees&#44; all ages</th>	<td class="female">79000</td>	<td class="male">86000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">60000</td>	<td class="male">61000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">	<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">75000</td>	<td class="male">85000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">85000</td>	<td class="male">96000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">	<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">91000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">75000</td>	<td class="male">82000</td>	</tr>
+<tr class="bachelors twenty-nine-and-younger">	<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">56000</td>	<td class="male">59000</td>	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">72000</td>	<td class="male">82000</td>	</tr>
+<tr class="bachelors forty-to-forty-nine">		<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">92000</td>	</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">74000</td>	<td class="male">88000</td>	</tr>
+<tr class="masters all-ages">					<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">84000</td>	<td class="male">96000</td>	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">66000</td>	<td class="male">75000</td>	</tr>
+<tr class="masters thirty-to-thirty-nine">		<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">80000</td>	<td class="male">95000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">89000</td>	<td class="male">104000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">		<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">92000</td>	<td class="male">94000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">95000</td>	<td class="male">101000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">	<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">0</td>	<td class="male">0</td>			</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">100000</td>	<td class="male">94000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">		<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">94000</td>	<td class="male">103000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">95000</td>	<td class="male">110000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table mathematical-scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as mathematical scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+
+<tr class="all-degrees all-ages">				<th scope="row">All degrees&#44; all ages</th>	<td class="female">70000</td>	<td class="male">80000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">55000</td>	<td class="male">49000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">	<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">68000</td>	<td class="male">74000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">84000</td>	<td class="male">90000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">	<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">70000</td>	<td class="male">91000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">67000</td>	<td class="male">61000</td>	</tr>
+<tr class="bachelors twenty-nine-and-younger">	<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">57000</td>	<td class="male">40000</td>	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">0</td>		<td class="male">61000</td>	</tr>
+<tr class="bachelors forty-to-forty-nine">		<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">0</td>		<td class="male">98000</td>	</tr>
+<tr class="masters all-ages">					<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">73000</td>	<td class="male">85000</td>	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">53000</td>	<td class="male">36000</td>	</tr>
+<tr class="masters thirty-to-thirty-nine">		<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">70000</td>	<td class="male">84000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">83000</td>	<td class="male">90000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">		<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">70000</td>	<td class="male">80000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">80000</td>	<td class="male">90000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">	<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">49000</td>	<td class="male">82000</td>	</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">80000</td>	<td class="male">80000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">		<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">97000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">93000</td>	<td class="male">95000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table physical-scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time physical scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">60000</td>	<td class="male">76000</td>		</tr>
+<tr class="all-degrees twenty-nine-and-younger">		<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">38000</td>	<td class="male">40000</td>		</tr>
+<tr class="all-degrees thirty-to-thirty-nine	">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">59000</td>	<td class="male">67000</td>		</tr>
+<tr class="all-degrees forty-to-forty-nine">			<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">70000</td>	<td class="male">85000</td>		</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">74000</td>	<td class="male">90000</td>		</tr>
+<tr class="bachelors all-ages">						<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">55000</td>	<td class="male">64000</td>		</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">33000</td>	<td class="male">40000</td>		</tr>
+<tr class="bachelors thirty-to-thirty-nine">			<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">60000</td>	<td class="male">64000</td>		</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">70000</td>	<td class="male">70000</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">			<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">69000</td>	<td class="male">75000</td>		</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">60000</td>	<td class="male">80000</td>		</tr>
+<tr class="masters twenty-nine-and-younger">			<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">41000</td>	<td class="male">29000</td>		</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">47000</td>	<td class="male">63000</td>		</tr>
+<tr class="masters forty-to-forty-nine">				<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">77000</td>	<td class="male">94000</td>		</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">69000</td>	<td class="male">98000</td>		</tr>
+<tr class="doctorate all-ages">						<th scope="row">Doctorate&#44; all ages</th>	<td class="female">74000</td>	<td class="male">93000</td>		</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">55000</td>	<td class="male">54000</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">			<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">64000</td>	<td class="male">76000</td>		</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">80000</td>	<td class="male">100000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">			<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">96000</td>	<td class="male">104000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table psychologist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as psychologists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">60000</td>	<td class="male">69000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">38000</td>	<td class="male">33000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">58000</td>	<td class="male">55000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">70000</td>	<td class="male">70000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">73000</td>	<td class="male">80000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">34000</td>	<td class="male">0</td>		</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>		<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>		<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>		<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>		<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">58000</td>	<td class="male">58000</td>	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">45000</td>	<td class="male">0</td>		</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">55000</td>	<td class="male">50000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">67000</td>	<td class="male">0</td>		</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">65000</td>	<td class="male">63000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">72000</td>	<td class="male">85000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">0</td>		<td class="male">0</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">68000</td>	<td class="male">60000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">72000</td>	<td class="male">80000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">99000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table social-scientist">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as social scientists, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">68000</td>	<td class="male">83000</td>		</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">46000</td>	<td class="male">46000</td>		</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">73000</td>	<td class="male">80000</td>		</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">73000</td>	<td class="male">95000</td>		</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">95000</td>		</tr>
+<tr class="bachelors all-ages	">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">62000</td>	<td class="male">66000</td>		</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">45000</td>	<td class="male">43000</td>		</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">0</td>		<td class="male">65000</td>		</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">0</td>		<td class="male">90000</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">0</td>		<td class="male">75000</td>		</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">70000</td>	<td class="male">91000</td>		</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">46000</td>	<td class="male">47000</td>		</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">75000</td>	<td class="male">83000</td>		</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">75000</td>	<td class="male">100000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">100000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">70000</td>	<td class="male">85000</td>		</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">65000</td>	<td class="male">0</td>			</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">64000</td>	<td class="male">68000</td>		</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">69000</td>	<td class="male">81000</td>		</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">80000</td>	<td class="male">95000</td>		</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table engineer">
+
+<caption>
+Median annual salary of scientists and engineers employed full time as engineers, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">77000</td>	<td class="male">90000</td>		</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">61000</td>	<td class="male">62000</td>		</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">78000</td>	<td class="male">84000</td>		</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">90000</td>	<td class="male">96000</td>		</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">97000</td>	<td class="male">100000</td>	</tr>
+<tr class="bachelors all-ages">					<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">72000</td>	<td class="male">85000</td>		</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">60000</td>	<td class="male">60000</td>		</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">75000</td>	<td class="male">80000</td>		</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">83000</td>	<td class="male">93000</td>		</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">94000</td>	<td class="male">95000</td>		</tr>
+<tr class="masters all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">81000</td>	<td class="male">96000</td>		</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">65000</td>	<td class="male">70000</td>		</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">80000</td>	<td class="male">90000</td>		</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">98000</td>	<td class="male">104000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">100000</td>	<td class="male">102000</td>	</tr>
+<tr class="doctorate all-ages">					<th scope="row">Doctorate&#44; all ages</th>	<td class="female">92000</td>	<td class="male">106000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">75000</td>	<td class="male">88000</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">82000</td>	<td class="male">95000</td>		</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">109000</td>	<td class="male">112000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">105000</td>	<td class="male">120000</td>	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table s-and-e-related">
+
+<caption>
+Median annual salary of scientists and engineers employed full time in S&#38;E related occupations, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees occupations all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">62000</td>	<td class="male">95000</td>		</tr>
+<tr class="all-degrees occupations twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">48000</td>	<td class="male">48000</td>		</tr>
+<tr class="all-degrees occupations thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">60000</td>	<td class="male">80000</td>		</tr>
+<tr class="all-degrees occupations forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">68000</td>	<td class="male">100000</td>	</tr>
+<tr class="all-degrees occupations fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">67000</td>	<td class="male">100000</td>	</tr>
+<tr class="bachelors occupations all-ages">						<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">58000</td>	<td class="male">75000</td>		</tr>
+<tr class="bachelors occupations twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">45000</td>	<td class="male">45000</td>		</tr>
+<tr class="bachelors occupations thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">55000</td>	<td class="male">71000</td>		</tr>
+<tr class="bachelors occupations forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">63000</td>	<td class="male">80000</td>		</tr>
+<tr class="bachelors occupations fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">60000</td>	<td class="male">85000</td>		</tr>
+<tr class="masters occupations all-ages">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">66000</td>	<td class="male">82000</td>		</tr>
+<tr class="masters occupations twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">52000</td>	<td class="male">53000</td>		</tr>
+<tr class="masters occupations thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">60000</td>	<td class="male">70000</td>		</tr>
+<tr class="masters occupations forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">70000</td>	<td class="male">90000</td>		</tr>
+<tr class="masters occupations fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">70000</td>	<td class="male">85000</td>		</tr>
+<tr class="doctorate occupations all-ages">						<th scope="row">Doctorate&#44; all ages</th>	<td class="female">76000</td>	<td class="male">120000</td>	</tr>
+<tr class="doctorate occupations twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">0</td>		<td class="male">0</td>			</tr>
+<tr class="doctorate occupations thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">70000</td>	<td class="male">100000</td> 	</tr>
+<tr class="doctorate occupations forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">85000</td>	<td class="male">120000</td> 	</tr>
+<tr class="doctorate occupations fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">88000</td>	<td class="male">126000</td> 	</tr>
+
+</tbody>
+</table>
+
+<table class="salary-table non-s-and-e-occupations">
+
+<caption>
+Median annual salary of scientists and engineers employed full time in non-S&#38;E occupations, by highest degree, age and sex (2008).
+</caption>
+
+<thead>
+	<tr> 
+		<th scope="col">Highest degree&#44; occupation and age</th>
+		<th scope="col">Female</th>
+		<th scope="col">Male</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr class="all-degrees all-ages">					<th scope="row">All degrees&#44; all ages</th>	<td class="female">51000</td>	<td class="male">78000</td>	</tr>
+<tr class="all-degrees twenty-nine-and-younger">	<th scope="row">All degrees&#44; 29 and younger</th>	<td class="female">40000</td>	<td class="male">47000</td>	</tr>
+<tr class="all-degrees thirty-to-thirty-nine">		<th scope="row">All degrees&#44; 30 to 39</th>	<td class="female">52000</td>	<td class="male">72000</td>	</tr>
+<tr class="all-degrees forty-to-forty-nine">		<th scope="row">All degrees&#44; 40 to 49</th>	<td class="female">60000</td>	<td class="male">92000</td>	</tr>
+<tr class="all-degrees fifty-to-seventy-five">		<th scope="row">All degrees&#44; 50 to 75</th>	<td class="female">56000</td>	<td class="male">82000</td>	</tr>
+<tr class="bachelors all-ages">						<th scope="row">Bachelor&#8217;s&#44; all ages</th>	<td class="female">45000</td>	<td class="male">67000</td>	</tr>
+<tr class="bachelors twenty-nine-and-younger">		<th scope="row">Bachelor&#8217;s&#44; 29 and younger</th>	<td class="female">37000</td>	<td class="male">44000</td>	</tr>
+<tr class="bachelors thirty-to-thirty-nine">		<th scope="row">Bachelor&#8217;s&#44; 30 to 39</th>	<td class="female">48000</td>	<td class="male">65000</td>	</tr>
+<tr class="bachelors forty-to-forty-nine">			<th scope="row">Bachelor&#8217;s&#44; 40 to 49</th>	<td class="female">50000</td>	<td class="male">80000</td>	</tr>
+<tr class="bachelors fifty-to-seventy-five">		<th scope="row">Bachelor&#8217;s&#44; 50 to 75</th>	<td class="female">47000</td>	<td class="male">68000</td>	</tr>
+<tr class="masters all-ages	">						<th scope="row">Master&#8217;s&#44; all ages</th>	<td class="female">57000</td>	<td class="male">90000</td>	</tr>
+<tr class="masters twenty-nine-and-younger">		<th scope="row">Master&#8217;s&#44; 29 and younger</th>	<td class="female">45000</td>	<td class="male">59000</td>	</tr>
+<tr class="masters thirty-to-thirty-nine">			<th scope="row">Master&#8217;s&#44; 30 to 39</th>	<td class="female">54000</td>	<td class="male">85000</td>	</tr>
+<tr class="masters forty-to-forty-nine">			<th scope="row">Master&#8217;s&#44; 40 to 49</th>	<td class="female">65000</td>	<td class="male">104000</td>	</tr>
+<tr class="masters fifty-to-seventy-five">			<th scope="row">Master&#8217;s&#44; 50 to 75</th>	<td class="female">62000</td>	<td class="male">90000</td>	</tr>
+<tr class="doctorate all-ages">						<th scope="row">Doctorate&#44; all ages</th>	<td class="female">80000</td>	<td class="male">110000</td>	</tr>
+<tr class="doctorate twenty-nine-and-younger">		<th scope="row">Doctorate&#44; 29 and younger</th>	<td class="female">70000</td>	<td class="male">0</td>		</tr>
+<tr class="doctorate thirty-to-thirty-nine">		<th scope="row">Doctorate&#44; 30 to 39</th>	<td class="female">74000</td>	<td class="male">80000</td>	</tr>
+<tr class="doctorate forty-to-forty-nine">			<th scope="row">Doctorate&#44; 40 to 49</th>	<td class="female">85000</td>	<td class="male">110000</td>	</tr>
+<tr class="doctorate fifty-to-seventy-five">		<th scope="row">Doctorate&#44; 50 to 75</th>	<td class="female">84000</td>	<td class="male">119000</td>	</tr>
+
+</tbody>
+</table>
+
+<p class="credit">0 means that data are unavailable.</p>
+
+<p class="credit">Data source: National Science Foundation Table 9-16 <a href="http://www.nsf.gov/statistics/wmpd/2013/tables.cfm">http://www.nsf.gov/statistics/wmpd/2013/tables.cfm</a></p>
+
+</div> <!-- salary-table-wrapper -->	
+
+
+</div> <!-- outerWrapper -->
+<script type="text/javascript">
+!function(){var a=function(a){a(".outer-wrapper .info-table-wrapper").css({display:"none"}),a(".outer-wrapper .salary-table-wrapper").css({display:"none"}),a(".outer-wrapper .info-chart").css({display:"block"}),a(".outer-wrapper .info-menu").css({display:"block"}),a(".outer-wrapper .nav-tabs").css({display:"block"}),a.getScript("http://d3js.org/d3.v3.min.js",function(){function b(b,c){for(;u.length>0;)u.shift();for(;o.length>0;)o.shift();a(".outer-wrapper table.info-table."+b+" .male ."+c).each(function(){var b=parseFloat(a(this).text());o.push(b)});for(var d=0;d<q.length;d++){var e={};e.x=d,e.y=o[d],u.push(e)}}function c(b,c){for(;v.length>0;)v.shift();for(;p.length>0;)p.shift();a(".outer-wrapper table.info-table."+b+" .female ."+c).each(function(){var b=parseFloat(a(this).text());p.push(b)});for(var d=0;d<q.length;d++){var e={};e.x=d,e.y=p[d],v.push(e)}}function d(b,c){n=[],a(".outer-wrapper table.info-table."+b+" .both-sexes ."+c).each(function(){var b=parseFloat(a(this).text());n.push(b)})}function e(){stack(w),t?(F.domain([0,d3.max(w,function(a){return d3.max(a,function(a){return a.y0+a.y})})]),d3.select(".outer-wrapper .info-chart .y").transition().duration(m).call(H)):(F.domain([0,d3.max(D)]),d3.select(".outer-wrapper .info-chart .y").transition().duration(m).call(H)),J.selectAll("rect").data(function(a){return a}).transition().duration(m).attr("y",function(a){return F(a.y)+F(a.y0)-j}).attr("height",function(a){return j-F(a.y)})}function f(){a(".outer-wrapper table.salary-table td").each(function(){var b=parseFloat(a(this).text());C.push(b)})}function g(b,c,d){B=[],a(".outer-wrapper table.salary-table."+b+" ."+c+"."+d+" td").each(function(){var b=parseFloat(a(this).text());B.push(b)})}function h(){O.selectAll("rect").data(B).transition().attr("opacity",function(a){return 0===a?0:1}).transition().duration(m).attr("y",function(a){return 0===a?j/2:L(a)}).attr("height",function(a){return 0===a?j-j/2:j-L(a)}),P.selectAll("text").data(B).transition().attr("fill",function(a){return 0===a?"black":"white"}).transition().duration(m).text(function(a){return 0===a?"Data not available":"$"+thousandFormat(a)}).attr("y",function(a){return 0===a?j/2+20:L(a)+20})}var i=625,j=300,k=5,l=60,m=500,n=[],o=[],p=[],q=[],r="all-positions",s="all-fields",t=!1,u=[],v=[],w=[],x="all-occupations",y="all-degrees",z="all-ages",A=[],B=[],C=[];thousandFormat=d3.format(",.0f"),stack=d3.layout.stack(),a(".outer-wrapper .nav-tabs a:first").click(function(b){return a(this).parent("li").hasClass("active")||(a(".outer-wrapper .nav-tabs a:not(:first)").parent("li").removeClass("active"),a(this).parent("li").addClass("active"),a(".outer-wrapper .info-chart").css({display:"block"}),a(".outer-wrapper .salary-chart").css({display:"none"}),a(".outer-wrapper .info-menu").css({display:"block"}),a(".outer-wrapper .salary-menu").css({display:"none"})),b.preventDefault(),!1}),a(".outer-wrapper .nav-tabs a:not(:first)").click(function(b){return a(this).parent("li").hasClass("active")||(a(".outer-wrapper .nav-tabs a:first").parent("li").removeClass("active"),a(this).parent("li").addClass("active"),a(".outer-wrapper .info-chart").css({display:"none"}),a(".outer-wrapper .salary-chart").css({display:"block"}),a(".outer-wrapper .info-menu").css({display:"none"}),a(".outer-wrapper .salary-menu").css({display:"block"})),b.preventDefault(),!1}),a(".outer-wrapper table.info-table.all-positions thead tr th:not(:first)").each(function(){var b=a(this).text();q.push(b)}),d(r,s),b(r,s),c(r,s);var D=n.concat();w.push(v),w.push(u),stack(w);{var E=d3.scale.linear().domain([l,i]).range([l,i]),F=d3.scale.linear().domain([0,d3.max(w,function(a){return d3.max(a,function(a){return a.y0+a.y})})]).range([j,l]),G=d3.svg.axis().scale(E).orient("bottom").tickSize(0,0).ticks(0),H=d3.svg.axis().scale(F).orient("left").tickSize(6,0).ticks(7),I=d3.select(".outer-wrapper .info-chart").append("svg").attr("width",i).attr("height",j+l/2),J=I.selectAll("g").data(w).enter().append("g").style("fill",function(a,b){return 0===b?"#E53524":"#F8B436"});J.selectAll("rect").data(function(a){return a}).enter().append("rect").attr("x",function(a,b){return b*((i-l)/w[0].length)+l}).attr("y",function(a){return F(a.y)+F(a.y0)-j}).attr("height",function(a){return j-F(a.y)}).attr("width",(i-l)/w[0].length-k).on("mouseover",function(b){var c,d=parseInt(a(".outer-wrapper .infobox").css("height")),e=parseInt(d3.select(this).attr("y"))+parseInt(d3.select(this).attr("height"))/2-d;d3.select(this).attr("x")<350?(c=parseFloat(d3.select(this).attr("x"))+27,d3.select(".outer-wrapper .infobox").classed("infobox-left",!1).classed("infobox-right",!0)):(c=parseFloat(d3.select(this).attr("x"))-140,d3.select(".outer-wrapper .infobox").classed("infobox-left",!0).classed("infobox-right",!1)),d3.select(".outer-wrapper .infobox").style("left",c+"px").style("top",e+"px").select(".value").text(b.y),d3.select(".outer-wrapper .infobox").classed("hidden",!1)}).on("mouseout",function(){d3.select(".outer-wrapper .infobox").classed("hidden",!0)})}I.selectAll("text").data(q).enter().append("text").text(function(a){return a}).attr("x",function(a,b){return b*((i-l)/q.length)+((i-l)/q.length-k)/2+l}).attr("y",function(){return j+12}).attr("font-family","sans-serif").attr("font-size","11px").attr("fill","black").attr("text-anchor","middle"),I.append("g").attr("class","x axis").attr("transform","translate(0,"+j+")").call(G),I.append("g").attr("class","y axis").attr("transform","translate("+l+", 0)").call(H).append("text").attr("transform","rotate(-90)").attr("y",-l+12).attr("x",-(j/2)).attr("dy",".71em").style("text-anchor","end").text("Thousands"),d3.selectAll(".outer-wrapper .info-menu select").on("change",function(){r=d3.select(".outer-wrapper .info-menu .position-dropdown").property("value"),s=d3.select(".outer-wrapper .info-menu .field-dropdown").property("value"),d(r,s),b(r,s),c(r,s),e()}),d3.selectAll(".outer-wrapper .info-menu input").on("change",function(){t=d3.select(this).property("checked"),e()}),a(".outer-wrapper table.salary-table.all-occupations thead tr th:not(:first)").each(function(){var b=a(this).text();A.push(b)}),g(x,y,z),f();var K=d3.scale.linear().domain([12*k,i]).range([12*k,i]),L=d3.scale.linear().domain([0,d3.max(C)]).range([j,l]),M=d3.svg.axis().scale(K).orient("bottom").tickSize(0,0).ticks(0),N=d3.svg.axis().scale(L).orient("left").tickSize(-i,0).ticks(7).tickFormat(d3.format(",.0f")),O=d3.select(".outer-wrapper .salary-chart").append("svg").attr("width",i).attr("height",j+l/2);O.append("g").attr("class","y axis").attr("transform","translate("+12*k+", 0)").call(N),O.selectAll("rect").data(B).enter().append("rect").attr("x",function(a,b){return b*((i-2*k)/B.length)+14*k}).attr("y",function(a){return L(a)}).attr("width",(i-2*k)/B.length-14*k).attr("height",function(a){return j-L(a)}).attr("opacity",1).style("fill",function(a,b){return 0===b?"#E53524":"#F8B436"});var P=O.append("g");P.selectAll("text").data(B).enter().append("text").text(function(a){return"$"+thousandFormat(a)}).attr("x",function(a,b){return b*((i-2*k)/B.length)+((i-2*k)/B.length-14*k)/2+14*k}).attr("y",function(a){return L(a)+20}).attr("font-family","sans-serif").attr("font-size","18px").attr("fill","white").attr("text-anchor","middle");var Q=O.append("g");Q.selectAll("text").data(A).enter().append("text").text(function(a){return a}).attr("x",function(a,b){return b*((i-2*k)/B.length)+((i-2*k)/B.length-14*k)/2+14*k}).attr("y",function(){return j+18}).attr("font-family","sans-serif").attr("font-size","14px").attr("fill","black").attr("text-anchor","middle"),O.append("g").attr("class","x axis").attr("transform","translate(0,"+j+")").call(M),d3.selectAll(".outer-wrapper .salary-menu select").on("change",function(){x=d3.select(".outer-wrapper .salary-menu .occupation-dropdown").property("value"),y=d3.select(".outer-wrapper .salary-menu .age-dropdown").property("value"),z=d3.select(".outer-wrapper .salary-menu .degree-dropdown").property("value"),g(x,y,z),h()})})};setTimeout(function(){"undefined"!=typeof jQuery?a(jQuery):setTimeout(arguments.callee,60)},60)}();
+</script>
